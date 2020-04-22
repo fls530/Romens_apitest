@@ -14,7 +14,7 @@ filename = os.path.join(DATA_DIR, "testcase.xlsx")
 
 @ddt
 class OrgguidTestCase(unittest.TestCase):
-    excel = HandleExcel(filename, "ORGGUID")
+    excel = HandleExcel(filename, "PWD")
     cases = excel.read_data()
 
     @data(*cases)
