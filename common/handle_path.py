@@ -4,7 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 用例模块所在的目录路径
-CASE_DIR = os.path.join(BASE_DIR, "testcase")
+CASE_DIR = os.path.join(BASE_DIR, "testcases")
 
 # 用例数据所在的目录路径
 DATA_DIR = os.path.join(BASE_DIR, "data")

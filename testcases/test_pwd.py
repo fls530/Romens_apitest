@@ -8,7 +8,6 @@ from common.handle_logging import log
 from common.handle_path import DATA_DIR
 from common.handle_data import EnvData, replace_data
 
-
 filename = os.path.join(DATA_DIR, "testcase.xlsx")
 
 
@@ -25,12 +24,22 @@ class OrgguidTestCase(unittest.TestCase):
         url = conf.get("env", "url") + case["url"]
         data = eval(replace_data(case["data"]))
         expected = eval(case["expected"])
+
+        expectedResult = ''
+        if 'result' in expected:
+            expectedResult = expected['result']
+        elif 'ERROR' in expected:
+            expectedResult = expected['ERROR']
         row = case["case_id"] + 1
         # 调用接口,获取实际结果
         res = (request(url=url, method=method, data=data, headers=headers)).json()
         try:
-            self.assertEqual(expected["result"], res["result"])
-            self.assertEqual(expected["msg"], res["msg"])
+            result = ''
+            if 'result' in res:
+                result = res['result']
+            elif 'ERROR' in res:
+                result = res['ERROR']
+            self.assertEqual(expectedResult, result)
         except AssertionError as e:
             # 结果回写excel中
             log.error("用例--{}--执行未通过".format(case["title"]))
@@ -43,7 +52,3 @@ class OrgguidTestCase(unittest.TestCase):
             # 结果回写excel中
             log.info("用例--{}--执行通过".format(case["title"]))
             self.excel.write_data(row=row, column=8, value="通过")
-
-
-
-
