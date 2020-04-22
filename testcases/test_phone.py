@@ -18,7 +18,7 @@ class OrgguidTestCase(unittest.TestCase):
     cases = excel.read_data()
 
     @data(*cases)
-    def test_orgguid(self, case):
+    def test_phone(self, case):
         # 准备用例数据
         method = case["method"]
         headers = eval(conf.get("env", "headers"))

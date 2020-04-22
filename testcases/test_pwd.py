@@ -17,14 +17,13 @@ class OrgguidTestCase(unittest.TestCase):
     cases = excel.read_data()
 
     @data(*cases)
-    def test_orgguid(self, case):
+    def test_pwd(self, case):
         # 准备用例数据
         method = case["method"]
         headers = eval(conf.get("env", "headers"))
         url = conf.get("env", "url") + case["url"]
         data = eval(replace_data(case["data"]))
         expected = eval(case["expected"])
-
         expectedResult = ''
         if 'result' in expected:
             expectedResult = expected['result']
