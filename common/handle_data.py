@@ -6,6 +6,7 @@ from common.handle_config import conf
 from requests import request
 
 
+
 class EnvData:
     """定义一个类，用来保存用例执行过程中，提取出来的数据（当成环境变量的容器）"""
     pass
@@ -59,3 +60,25 @@ def login():
         raise e
 
     return token
+
+
+def getdata(case):
+    method = case["method"]
+    headers = eval(conf.get("env", "headers"))
+    url = conf.get("env", "url") + case["url"]
+    data = eval(replace_data(case["data"]))
+    row = case["case_id"] + 1
+    expected = eval(case["expected"])
+    expectedResult = ''
+    if 'result' in expected:
+        expectedResult = expected['result']
+    elif 'ERROR' in expected:
+        expectedResult = expected['ERROR']
+    expected = expectedResult
+
+    return method, headers, url, data, row, expected
+
+
+
+
+
