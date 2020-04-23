@@ -423,3 +423,9 @@ AssertionError: '0001' != '0000'
 2020-04-22 15:59:24,421 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-企业号为空--执行通过
 2020-04-22 15:59:24,488 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-手机号为空--执行通过
 2020-04-22 15:59:24,564 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-设备号为空--执行通过
+2020-04-23 10:02:16,645 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-获取成功--执行通过
+2020-04-23 10:02:18,071 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-clienType为空--执行通过
+2020-04-23 10:02:18,696 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-build为空--执行通过
+2020-04-23 10:02:30,908 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-获取成功--执行通过
+2020-04-23 10:02:31,431 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-clienType为空--执行通过
+2020-04-23 10:02:31,891 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-build为空--执行通过
