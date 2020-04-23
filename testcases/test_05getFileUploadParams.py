@@ -12,12 +12,12 @@ filename = os.path.join(DATA_DIR, "testcase.xlsx")
 
 
 @ddt
-class GetversionTestCase(unittest.TestCase):
-    excel = HandleExcel(filename, "getversion")
+class getFileUploadParamsTestCase(unittest.TestCase):
+    excel = HandleExcel(filename, "getFileUploadParams")
     cases = excel.read_data()
 
     @data(*cases)
-    def test_orgguid(self, case):
+    def test_getparams(self, case):
         method = case["method"]
         headers = eval(conf.get("env", "headers"))
         url = conf.get("env", "url") + case["url"]
