@@ -2,6 +2,7 @@
   <dictionary name="Administrator">
     <words>
       <w>deviceid</w>
+      <w>getversion</w>
       <w>orgguid</w>
       <w>romens</w>
       <w>testcase</w>

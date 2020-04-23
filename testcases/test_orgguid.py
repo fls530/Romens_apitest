@@ -8,7 +8,6 @@ from common.handle_logging import log
 from common.handle_path import DATA_DIR
 from common.handle_data import EnvData, replace_data
 
-
 filename = os.path.join(DATA_DIR, "testcase.xlsx")
 
 
@@ -43,7 +42,3 @@ class OrgguidTestCase(unittest.TestCase):
             # 结果回写excel中
             log.info("用例--{}--执行通过".format(case["title"]))
             self.excel.write_data(row=row, column=8, value="通过")
-
-
-
-
