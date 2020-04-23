@@ -1126,3 +1126,211 @@ AssertionError: '0001' != '0000'
 2020-04-23 11:47:52,466 -- [test_06getTxCosConfig.py-->line:42] - INFO: 用例--获取腾讯COS临时参数-获取成功--执行通过
 2020-04-23 11:47:53,007 -- [test_06getTxCosConfig.py-->line:42] - INFO: 用例--获取腾讯COS临时参数-Params为空--执行通过
 2020-04-23 11:47:53,031 -- [run_test.py-->line:20] - INFO: ---------------测试用例执行完毕,正在发送邮件,请注意查收-----------------------
+2020-04-23 14:24:21,669 -- [run_test.py-->line:6] - INFO: ---------------开始执行测试用例-----------------------
+2020-04-23 14:24:22,240 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-验证成功--执行通过
+2020-04-23 14:24:22,333 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-企业号为空--执行通过
+2020-04-23 14:24:22,401 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-QueryType为空--执行通过
+2020-04-23 14:24:22,472 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-AppName为空--执行通过
+2020-04-23 14:24:22,542 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-不传QueryType--执行通过
+2020-04-23 14:24:22,611 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-不传Params--执行通过
+2020-04-23 14:24:22,682 -- [test_02phone.py-->line:49] - INFO: 用例--App验证手机号-验证成功--执行通过
+2020-04-23 14:24:22,752 -- [test_02phone.py-->line:41] - ERROR: 用例--App验证手机号-手机号为空--执行未通过
+2020-04-23 14:24:22,753 -- [test_02phone.py-->line:42] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 14:24:22,753 -- [test_02phone.py-->line:43] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587623062.5585, 'endtime': 1587623062.5664}
+2020-04-23 14:24:22,753 -- [test_02phone.py-->line:44] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02phone.py", line 37, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 14:24:22,824 -- [test_02phone.py-->line:49] - INFO: 用例--App验证手机号-QueryType为空--执行通过
+2020-04-23 14:24:22,897 -- [test_02phone.py-->line:49] - INFO: 用例--App验证手机号-AppName为空--执行通过
+2020-04-23 14:24:22,972 -- [test_02phone.py-->line:49] - INFO: 用例--App验证手机号-不传QueryType--执行通过
+2020-04-23 14:24:23,040 -- [test_02phone.py-->line:49] - INFO: 用例--App验证手机号-不传Params--执行通过
+2020-04-23 14:24:23,114 -- [test_02phone.py-->line:41] - ERROR: 用例--App验证手机号-企业号为空--执行未通过
+2020-04-23 14:24:23,114 -- [test_02phone.py-->line:42] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 14:24:23,114 -- [test_02phone.py-->line:43] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587623062.9204, 'endtime': 1587623062.9285}
+2020-04-23 14:24:23,115 -- [test_02phone.py-->line:44] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02phone.py", line 37, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 14:24:23,191 -- [test_03pwd.py-->line:57] - INFO: 用例--App验证密码-验证成功--执行通过
+2020-04-23 14:24:23,261 -- [test_03pwd.py-->line:57] - INFO: 用例--App验证密码-密码为空--执行通过
+2020-04-23 14:24:23,349 -- [test_03pwd.py-->line:57] - INFO: 用例--App验证密码-企业号为空--执行通过
+2020-04-23 14:24:23,424 -- [test_03pwd.py-->line:57] - INFO: 用例--App验证密码-手机号为空--执行通过
+2020-04-23 14:24:23,501 -- [test_03pwd.py-->line:57] - INFO: 用例--App验证密码-设备号为空--执行通过
+2020-04-23 14:24:24,108 -- [test_04getversion.py-->line:47] - INFO: 用例--获取app版本信息-获取成功--执行通过
+2020-04-23 14:24:24,782 -- [test_04getversion.py-->line:47] - INFO: 用例--获取app版本信息-clienType为空--执行通过
+2020-04-23 14:24:25,341 -- [test_04getversion.py-->line:47] - INFO: 用例--获取app版本信息-build为空--执行通过
+2020-04-23 14:24:25,724 -- [test_05getFileUploadParams.py-->line:47] - INFO: 用例--获取上传参数-获取成功--执行通过
+2020-04-23 14:24:26,232 -- [test_05getFileUploadParams.py-->line:47] - INFO: 用例--获取上传参数-Params为空--执行通过
+2020-04-23 14:24:26,770 -- [test_06getTxCosConfig.py-->line:47] - INFO: 用例--获取腾讯COS临时参数-获取成功--执行通过
+2020-04-23 14:24:27,343 -- [test_06getTxCosConfig.py-->line:47] - INFO: 用例--获取腾讯COS临时参数-Params为空--执行通过
+2020-04-23 14:24:27,742 -- [test_07getSysConfig.py-->line:39] - ERROR: 用例--获取系统配置-获取成功--执行未通过
+2020-04-23 14:24:27,742 -- [test_07getSysConfig.py-->line:40] - DEBUG: 预期结果：{'result': '0000', 'msg': '成功'}
+2020-04-23 14:24:27,742 -- [test_07getSysConfig.py-->line:41] - DEBUG: 实际结果：{'result': '0000', 'msg': '获取成功', 'data': [{'GUID': '9c022a9e-ec6f-11e7-af47-ec388f6f5b1d', 'COMMENTCODE': '0', 'GROUP': 'SYS', 'KEY': 'HOMEPAGES', 'VALUE': 'REFTQk9BUkQsV09SS0JFTkNILENMT1VETEVBUk4sTUVNQkVSU0VSVkVSLE1FU1NBR0VT', 'STATE': '0', 'DESC': '系统配置', 'UPDATED': '1518062451', 'VERSION': '1.0'}, {'GUID': '9c022ca0-ec6f-11e7-af47-ec388f6f5b1d', 'COMMENTCODE': '0', 'GROUP': 'SYS', 'KEY': 'COMNAME', 'VALUE': '河南张仲景大药房股份有限公司', 'STATE': '0', 'DESC': '企业名称', 'UPDATED': '1514534987', 'VERSION': '1.0'}, {'GUID': '9c022d55-ec6f-11e7-af47-ec388f6f5b1d', 'COMMENTCODE': '0', 'GROUP': 'SYS', 'KEY': 'WW_SIGN_SERVER', 'VALUE': 'http://im.yiyao365.cn/', 'STATE': '0', 'DESC': '工作圈应用服务器地址', 'UPDATED': '1514534990', 'VERSION': '1.0'}, {'GUID': 'c96b890a-5df9-11e7-af47-ec388f6f5b112', 'COMMENTCODE': '0', 'GROUP': 'SYS', 'KEY': 'MEMBER_SIMPLE_CARD_INTENTURL', 'VALUE': 'WEEX|@http://weex.yy365.cn/sy-memberInfo.js?memberid={MEMBERID}&token={TOKEN}&type=detail', 'STATE': '0', 'DESC': '新方法获取新会员信息', 'UPDATED': '1524637252', 'VERSION': '1.0'}, {'GUID': 'e9d5b44282c3a73575cf9f474c1dd3b1', 'COMMENTCODE': '0', 'GROUP': 'SYS', 'KEY': 'SALESQRCODE', 'VALUE': 'http://im.yiyao365.cn/yyzs/Qrcode?token={TOKEN}&wap_class=tab', 'STATE': '1', 'DESC': '营业员二维码地址', 'UPDATED': '1525918184', 'VERSION': '1.0'}], 'starttime': 1587623067.2837, 'endtime': 1587623067.555}
+2020-04-23 14:24:27,742 -- [test_07getSysConfig.py-->line:42] - ERROR: '成功' != '获取成功'
+- 成功
++ 获取成功
+? ++
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_07getSysConfig.py", line 36, in test_syncSysConfig
+    self.assertEqual(expected["msg"], res["msg"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '成功' != '获取成功'
+- 成功
++ 获取成功
+? ++
+
+2020-04-23 14:24:28,252 -- [test_08getConfig.py-->line:39] - ERROR: 用例--获取配置-获取成功--执行未通过
+2020-04-23 14:24:28,252 -- [test_08getConfig.py-->line:40] - DEBUG: 预期结果：{'result': '0000', 'msg': '成功'}
+2020-04-23 14:24:28,252 -- [test_08getConfig.py-->line:41] - DEBUG: 实际结果：{'result': '0000', 'msg': '获取成功', 'data': {'IS_FACE_CHECK': '0', 'IS_IDCARD_CHECK': '0', 'IS_FINGERPRINT_CHECK': '0', 'IS_SHOP_NEED_MEDIC': '0', 'IS_DIST_DRUG_TYPE': '0', 'IS_FACE_CHECK_DOCTOR': '0', 'IS_RECOMMEND_PHAR': '1'}, 'starttime': 1587623067.6789, 'endtime': 1587623068.0651}
+2020-04-23 14:24:28,252 -- [test_08getConfig.py-->line:42] - ERROR: '成功' != '获取成功'
+- 成功
++ 获取成功
+? ++
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_08getConfig.py", line 36, in test_getConfig
+    self.assertEqual(expected["msg"], res["msg"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '成功' != '获取成功'
+- 成功
++ 获取成功
+? ++
+
+2020-04-23 14:24:28,644 -- [test_09getAppTitle.py-->line:39] - ERROR: 用例--获取首页功能模块-获取成功--执行未通过
+2020-04-23 14:24:28,645 -- [test_09getAppTitle.py-->line:40] - DEBUG: 预期结果：{'result': '0000', 'msg': '成功'}
+2020-04-23 14:24:28,645 -- [test_09getAppTitle.py-->line:41] - DEBUG: 实际结果：{'result': '0000', 'msg': '获取成功', 'data': [{'KEY': 'APPOINT_CONSULTE', 'TITLE': '预约问诊', 'IMG_URL': 'http://doctor.yy365.cn/ui/shop/img/appoint.png'}, {'KEY': 'POSBILL', 'TITLE': '挂单查询', 'IMG_URL': 'http://doctor.yy365.cn/ui/shop/img/posbill.png'}, {'KEY': 'TTELE_VISIT', 'TITLE': '远程问诊', 'IMG_URL': 'http://doctor.yy365.cn/ui/shop/img/visit.png'}, {'KEY': 'MEMBER_CARD', 'TITLE': '会员办卡', 'IMG_URL': 'http://doctor.yy365.cn/ui/shop/img/member.png'}, {'KEY': 'PRESCRIPT_UPLOAD', 'TITLE': '处方上传', 'IMG_URL': 'http://doctor.yy365.cn/ui/shop/img/presupload.png'}, {'KEY': 'PRESCRIPT_ENQUIRY', 'TITLE': '线上处方', 'IMG_URL': 'http://doctor.yy365.cn/ui/shop/img/presenquiry.png'}, {'KEY': 'MEDICATE_CONSULT', 'TITLE': '用药咨询', 'IMG_URL': 'http://doctor.yy365.cn/ui/shop/img/medcont.png'}, {'KEY': 'TODAY_PRESCRIPT', 'TITLE': '今日外方', 'IMG_URL': 'http://doctor.yy365.cn/ui/shop/img/presenquiry.png'}, {'KEY': 'HIS_PRESCRIPT', 'TITLE': '历史外方', 'IMG_URL': 'http://doctor.yy365.cn/ui/shop/img/presenquiry.png'}, {'KEY': 'DASHBOARD', 'TITLE': '仪表盘', 'IMG_URL': 'http://doctor.yy365.cn/ui/shop/img/dashboard.png'}], 'starttime': 1587623068.1816, 'endtime': 1587623068.455}
+2020-04-23 14:24:28,645 -- [test_09getAppTitle.py-->line:42] - ERROR: '成功' != '获取成功'
+- 成功
++ 获取成功
+? ++
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_09getAppTitle.py", line 36, in test_getAppTitle
+    self.assertEqual(expected["msg"], res["msg"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '成功' != '获取成功'
+- 成功
++ 获取成功
+? ++
+
+2020-04-23 14:24:28,681 -- [run_test.py-->line:20] - INFO: ---------------测试用例执行完毕,正在发送邮件,请注意查收-----------------------
+2020-04-23 14:25:10,622 -- [run_test.py-->line:6] - INFO: ---------------开始执行测试用例-----------------------
+2020-04-23 14:25:11,145 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-验证成功--执行通过
+2020-04-23 14:25:11,218 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-企业号为空--执行通过
+2020-04-23 14:25:11,285 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-QueryType为空--执行通过
+2020-04-23 14:25:11,354 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-AppName为空--执行通过
+2020-04-23 14:25:11,432 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-不传QueryType--执行通过
+2020-04-23 14:25:11,507 -- [test_01orgguid.py-->line:48] - INFO: 用例--App验证企业号-不传Params--执行通过
+2020-04-23 14:25:11,585 -- [test_02phone.py-->line:49] - INFO: 用例--App验证手机号-验证成功--执行通过
+2020-04-23 14:25:11,656 -- [test_02phone.py-->line:41] - ERROR: 用例--App验证手机号-手机号为空--执行未通过
+2020-04-23 14:25:11,656 -- [test_02phone.py-->line:42] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 14:25:11,657 -- [test_02phone.py-->line:43] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587623111.4606, 'endtime': 1587623111.4694}
+2020-04-23 14:25:11,657 -- [test_02phone.py-->line:44] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02phone.py", line 37, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 14:25:11,723 -- [test_02phone.py-->line:49] - INFO: 用例--App验证手机号-QueryType为空--执行通过
+2020-04-23 14:25:11,796 -- [test_02phone.py-->line:49] - INFO: 用例--App验证手机号-AppName为空--执行通过
+2020-04-23 14:25:11,866 -- [test_02phone.py-->line:49] - INFO: 用例--App验证手机号-不传QueryType--执行通过
+2020-04-23 14:25:11,936 -- [test_02phone.py-->line:49] - INFO: 用例--App验证手机号-不传Params--执行通过
+2020-04-23 14:25:12,008 -- [test_02phone.py-->line:41] - ERROR: 用例--App验证手机号-企业号为空--执行未通过
+2020-04-23 14:25:12,008 -- [test_02phone.py-->line:42] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 14:25:12,008 -- [test_02phone.py-->line:43] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587623111.8119, 'endtime': 1587623111.8205}
+2020-04-23 14:25:12,008 -- [test_02phone.py-->line:44] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02phone.py", line 37, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 14:25:12,085 -- [test_03pwd.py-->line:57] - INFO: 用例--App验证密码-验证成功--执行通过
+2020-04-23 14:25:12,154 -- [test_03pwd.py-->line:57] - INFO: 用例--App验证密码-密码为空--执行通过
+2020-04-23 14:25:12,227 -- [test_03pwd.py-->line:57] - INFO: 用例--App验证密码-企业号为空--执行通过
+2020-04-23 14:25:12,298 -- [test_03pwd.py-->line:57] - INFO: 用例--App验证密码-手机号为空--执行通过
+2020-04-23 14:25:12,375 -- [test_03pwd.py-->line:57] - INFO: 用例--App验证密码-设备号为空--执行通过
+2020-04-23 14:25:12,837 -- [test_04getversion.py-->line:47] - INFO: 用例--获取app版本信息-获取成功--执行通过
+2020-04-23 14:25:13,541 -- [test_04getversion.py-->line:47] - INFO: 用例--获取app版本信息-clienType为空--执行通过
+2020-04-23 14:25:14,025 -- [test_04getversion.py-->line:47] - INFO: 用例--获取app版本信息-build为空--执行通过
+2020-04-23 14:25:14,495 -- [test_05getFileUploadParams.py-->line:47] - INFO: 用例--获取上传参数-获取成功--执行通过
+2020-04-23 14:25:14,888 -- [test_05getFileUploadParams.py-->line:47] - INFO: 用例--获取上传参数-Params为空--执行通过
+2020-04-23 14:25:15,436 -- [test_06getTxCosConfig.py-->line:47] - INFO: 用例--获取腾讯COS临时参数-获取成功--执行通过
+2020-04-23 14:25:16,033 -- [test_06getTxCosConfig.py-->line:47] - INFO: 用例--获取腾讯COS临时参数-Params为空--执行通过
+2020-04-23 14:25:16,455 -- [test_07getSysConfig.py-->line:47] - INFO: 用例--获取系统配置-获取成功--执行通过
+2020-04-23 14:25:16,843 -- [test_08getConfig.py-->line:47] - INFO: 用例--获取配置-获取成功--执行通过
+2020-04-23 14:25:17,265 -- [test_09getAppTitle.py-->line:47] - INFO: 用例--获取首页功能模块-获取成功--执行通过
+2020-04-23 14:25:17,291 -- [run_test.py-->line:20] - INFO: ---------------测试用例执行完毕,正在发送邮件,请注意查收-----------------------
