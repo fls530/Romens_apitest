@@ -1,12 +1,14 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Administrator">
     <words>
+      <w>asctime</w>
       <w>deviceid</w>
       <w>getconfig</w>
       <w>getversion</w>
       <w>orgguid</w>
       <w>romens</w>
       <w>testcase</w>
+      <w>testcases</w>
       <w>xlsx</w>
     </words>
   </dictionary>

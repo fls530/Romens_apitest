@@ -6,7 +6,7 @@ from common.handle_config import conf
 from requests import request
 from common.handle_logging import log
 from common.handle_path import DATA_DIR
-from common.handle_data import EnvData, replace_data
+from common.handle_data import replace_data
 
 filename = os.path.join(DATA_DIR, "testcase.xlsx")
 
@@ -26,7 +26,12 @@ class OrgguidTestCase(unittest.TestCase):
         expected = eval(case["expected"])
         row = case["case_id"] + 1
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (
+            request(
+                url=url,
+                method=method,
+                data=data,
+                headers=headers)).json()
         try:
             self.assertEqual(expected["result"], res["result"])
             self.assertEqual(expected["msg"], res["msg"])

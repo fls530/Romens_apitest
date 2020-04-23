@@ -1,12 +1,9 @@
 import base64
 import json
-import os
 import re
 import jsonpath
 from common.handle_config import conf
 from requests import request
-from common.handle_excel import HandleExcel
-from common.handle_path import DATA_DIR
 
 
 class EnvData:
@@ -27,7 +24,7 @@ def replace_data(data):
         try:
             # 获取配置文件中对应的值
             value = conf.get("test_data", item)
-        except:
+        except BaseException:
             # 去EnvData这个类里面获取对应的属性（环境变量）
             value = getattr(EnvData, item)
         data = data.replace(key, value)
@@ -39,7 +36,12 @@ def login():
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
     url = 'http://doctor.yy365.cn/Login'
     data = {"QueryType": "userLoginInByPwd",
-            "Params": '{"DEVICEID": "'+conf.get("test_data", "DEVICEID")+'", "USERPHONE": "'+conf.get("test_data", "USERPHONE")+'", "PWD": "000000", "ORGGUID": "'+conf.get("test_data", "ORGGUID")+'","AppName": "com.romens.health.pharmacy.client"}'}
+            "Params": '{"DEVICEID": "' + conf.get("test_data", "DEVICEID") + '", '
+                                                                             '"USERPHONE": "' +
+                      conf.get("test_data", "USERPHONE") + '", '
+                                                           '"PWD": "000000", "ORGGUID": "' +
+                      conf.get("test_data", "ORGGUID") + '",'
+                                                         '"AppName": "com.romens.health.pharmacy.client"}'}
     res = (request(url=url, method=method, data=data, headers=headers)).json()
     try:
         dic = {"ORG_CODE": conf.get("test_data", "ORGGUID"),

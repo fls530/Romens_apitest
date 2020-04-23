@@ -27,7 +27,12 @@ class PhoneTestCase(unittest.TestCase):
         expected = eval(case["expected"])
         row = case["case_id"] + 1
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (
+            request(
+                url=url,
+                method=method,
+                data=data,
+                headers=headers)).json()
         try:
             self.assertEqual(expected["result"], res["result"])
             self.assertEqual(expected["msg"], res["msg"])
@@ -43,7 +48,3 @@ class PhoneTestCase(unittest.TestCase):
             # 结果回写excel中
             log.info("用例--{}--执行通过".format(case["title"]))
             self.excel.write_data(row=row, column=8, value="通过")
-
-
-
-

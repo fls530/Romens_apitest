@@ -171,7 +171,7 @@ def add_test(cls, test_name, test_docstring, func, *args, **kwargs):
 
     """
     setattr(cls, test_name, feed_data(func, test_name, test_docstring,
-            *args, **kwargs))
+                                      *args, **kwargs))
 
 
 def process_file_data(cls, name, func, file_attr):
