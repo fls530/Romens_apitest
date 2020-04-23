@@ -429,3 +429,302 @@ AssertionError: '0001' != '0000'
 2020-04-23 10:02:30,908 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-获取成功--执行通过
 2020-04-23 10:02:31,431 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-clienType为空--执行通过
 2020-04-23 10:02:31,891 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-build为空--执行通过
+2020-04-23 10:03:37,148 -- [run_test.py-->line:6] - INFO: ---------------开始执行测试用例-----------------------
+2020-04-23 10:03:37,609 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-验证成功--执行通过
+2020-04-23 10:03:37,676 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-企业号为空--执行通过
+2020-04-23 10:03:37,743 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-QueryType为空--执行通过
+2020-04-23 10:03:37,820 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-AppName为空--执行通过
+2020-04-23 10:03:37,885 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传QueryType--执行通过
+2020-04-23 10:03:37,956 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传Params--执行通过
+2020-04-23 10:03:38,034 -- [test_phone.py-->line:36] - ERROR: 用例--App验证手机号-手机号为空--执行未通过
+2020-04-23 10:03:38,034 -- [test_phone.py-->line:37] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 10:03:38,034 -- [test_phone.py-->line:38] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587607417.7895, 'endtime': 1587607417.7977}
+2020-04-23 10:03:38,034 -- [test_phone.py-->line:39] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_phone.py", line 32, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 10:03:38,100 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-不传Params--执行通过
+2020-04-23 10:03:38,171 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-手机号为空--执行通过
+2020-04-23 10:03:38,198 -- [run_test.py-->line:20] - INFO: ---------------测试用例执行完毕,正在发送邮件,请注意查收-----------------------
+2020-04-23 10:07:24,853 -- [run_test.py-->line:6] - INFO: ---------------开始执行测试用例-----------------------
+2020-04-23 10:07:26,451 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-验证成功--执行通过
+2020-04-23 10:07:27,160 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-企业号为空--执行通过
+2020-04-23 10:07:27,542 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-QueryType为空--执行通过
+2020-04-23 10:07:27,622 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-AppName为空--执行通过
+2020-04-23 10:07:27,700 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传QueryType--执行通过
+2020-04-23 10:07:27,796 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传Params--执行通过
+2020-04-23 10:07:27,883 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-验证成功--执行通过
+2020-04-23 10:07:27,964 -- [test_phone.py-->line:36] - ERROR: 用例--App验证手机号-手机号为空--执行未通过
+2020-04-23 10:07:27,965 -- [test_phone.py-->line:37] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 10:07:27,965 -- [test_phone.py-->line:38] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587607647.7176, 'endtime': 1587607647.7321}
+2020-04-23 10:07:27,965 -- [test_phone.py-->line:39] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_phone.py", line 32, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 10:07:28,039 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-QueryType为空--执行通过
+2020-04-23 10:07:28,112 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-AppName为空--执行通过
+2020-04-23 10:07:28,201 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-不传QueryType--执行通过
+2020-04-23 10:07:28,292 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-不传Params--执行通过
+2020-04-23 10:07:28,359 -- [test_phone.py-->line:36] - ERROR: 用例--App验证手机号-企业号为空--执行未通过
+2020-04-23 10:07:28,359 -- [test_phone.py-->line:37] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 10:07:28,359 -- [test_phone.py-->line:38] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587607648.1207, 'endtime': 1587607648.1292}
+2020-04-23 10:07:28,359 -- [test_phone.py-->line:39] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_phone.py", line 32, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 10:07:28,433 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-验证成功--执行通过
+2020-04-23 10:07:28,497 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-密码为空--执行通过
+2020-04-23 10:07:28,572 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-企业号为空--执行通过
+2020-04-23 10:07:28,657 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-手机号为空--执行通过
+2020-04-23 10:07:28,738 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-设备号为空--执行通过
+2020-04-23 10:07:28,756 -- [run_test.py-->line:20] - INFO: ---------------测试用例执行完毕,正在发送邮件,请注意查收-----------------------
+2020-04-23 10:08:07,358 -- [run_test.py-->line:6] - INFO: ---------------开始执行测试用例-----------------------
+2020-04-23 10:08:07,818 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-验证成功--执行通过
+2020-04-23 10:08:07,902 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-企业号为空--执行通过
+2020-04-23 10:08:07,988 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-QueryType为空--执行通过
+2020-04-23 10:08:08,073 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-AppName为空--执行通过
+2020-04-23 10:08:08,137 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传QueryType--执行通过
+2020-04-23 10:08:08,203 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传Params--执行通过
+2020-04-23 10:08:08,261 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-验证成功--执行通过
+2020-04-23 10:08:08,325 -- [test_phone.py-->line:36] - ERROR: 用例--App验证手机号-手机号为空--执行未通过
+2020-04-23 10:08:08,325 -- [test_phone.py-->line:37] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 10:08:08,325 -- [test_phone.py-->line:38] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587607688.0891, 'endtime': 1587607688.0978}
+2020-04-23 10:08:08,325 -- [test_phone.py-->line:39] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_phone.py", line 32, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 10:08:08,392 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-QueryType为空--执行通过
+2020-04-23 10:08:08,452 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-AppName为空--执行通过
+2020-04-23 10:08:08,509 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-不传QueryType--执行通过
+2020-04-23 10:08:08,571 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-不传Params--执行通过
+2020-04-23 10:08:08,641 -- [test_phone.py-->line:36] - ERROR: 用例--App验证手机号-企业号为空--执行未通过
+2020-04-23 10:08:08,641 -- [test_phone.py-->line:37] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 10:08:08,642 -- [test_phone.py-->line:38] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587607688.4002, 'endtime': 1587607688.4088}
+2020-04-23 10:08:08,642 -- [test_phone.py-->line:39] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_phone.py", line 32, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 10:08:08,722 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-验证成功--执行通过
+2020-04-23 10:08:08,806 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-密码为空--执行通过
+2020-04-23 10:08:08,885 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-企业号为空--执行通过
+2020-04-23 10:08:08,981 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-手机号为空--执行通过
+2020-04-23 10:08:09,069 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-设备号为空--执行通过
+2020-04-23 10:08:09,087 -- [run_test.py-->line:20] - INFO: ---------------测试用例执行完毕,正在发送邮件,请注意查收-----------------------
+2020-04-23 10:10:00,599 -- [run_test.py-->line:6] - INFO: ---------------开始执行测试用例-----------------------
+2020-04-23 10:10:01,246 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-验证成功--执行通过
+2020-04-23 10:10:01,349 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-企业号为空--执行通过
+2020-04-23 10:10:01,438 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-QueryType为空--执行通过
+2020-04-23 10:10:01,546 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-AppName为空--执行通过
+2020-04-23 10:10:01,640 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传QueryType--执行通过
+2020-04-23 10:10:01,739 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传Params--执行通过
+2020-04-23 10:10:05,031 -- [run_test.py-->line:6] - INFO: ---------------开始执行测试用例-----------------------
+2020-04-23 10:10:05,488 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-验证成功--执行通过
+2020-04-23 10:10:05,552 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-企业号为空--执行通过
+2020-04-23 10:10:05,613 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-QueryType为空--执行通过
+2020-04-23 10:10:05,677 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-AppName为空--执行通过
+2020-04-23 10:10:05,741 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传QueryType--执行通过
+2020-04-23 10:10:05,806 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传Params--执行通过
+2020-04-23 10:10:05,870 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-验证成功--执行通过
+2020-04-23 10:10:05,931 -- [test_phone.py-->line:36] - ERROR: 用例--App验证手机号-手机号为空--执行未通过
+2020-04-23 10:10:05,931 -- [test_phone.py-->line:37] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 10:10:05,931 -- [test_phone.py-->line:38] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587607805.696, 'endtime': 1587607805.7044}
+2020-04-23 10:10:05,932 -- [test_phone.py-->line:39] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_phone.py", line 32, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 10:10:06,007 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-QueryType为空--执行通过
+2020-04-23 10:10:06,086 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-AppName为空--执行通过
+2020-04-23 10:10:06,164 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-不传QueryType--执行通过
+2020-04-23 10:10:06,248 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-不传Params--执行通过
+2020-04-23 10:10:06,334 -- [test_phone.py-->line:36] - ERROR: 用例--App验证手机号-企业号为空--执行未通过
+2020-04-23 10:10:06,334 -- [test_phone.py-->line:37] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 10:10:06,334 -- [test_phone.py-->line:38] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587607806.0873, 'endtime': 1587607806.0957}
+2020-04-23 10:10:06,334 -- [test_phone.py-->line:39] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_phone.py", line 32, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 10:10:06,419 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-验证成功--执行通过
+2020-04-23 10:10:06,507 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-密码为空--执行通过
+2020-04-23 10:10:06,595 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-企业号为空--执行通过
+2020-04-23 10:10:06,666 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-手机号为空--执行通过
+2020-04-23 10:10:06,736 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-设备号为空--执行通过
+2020-04-23 10:10:06,759 -- [run_test.py-->line:20] - INFO: ---------------测试用例执行完毕,正在发送邮件,请注意查收-----------------------
+2020-04-23 10:10:33,535 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-获取成功--执行通过
+2020-04-23 10:10:34,057 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-clienType为空--执行通过
+2020-04-23 10:10:34,447 -- [getversion.py-->line:42] - INFO: 用例--获取app版本信息-build为空--执行通过
+2020-04-23 10:11:54,421 -- [run_test.py-->line:6] - INFO: ---------------开始执行测试用例-----------------------
+2020-04-23 10:11:54,887 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-验证成功--执行通过
+2020-04-23 10:11:54,960 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-企业号为空--执行通过
+2020-04-23 10:11:55,028 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-QueryType为空--执行通过
+2020-04-23 10:11:55,116 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-AppName为空--执行通过
+2020-04-23 10:11:55,197 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传QueryType--执行通过
+2020-04-23 10:11:55,270 -- [test_orgguid.py-->line:44] - INFO: 用例--App验证企业号-不传Params--执行通过
+2020-04-23 10:11:55,348 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-验证成功--执行通过
+2020-04-23 10:11:55,433 -- [test_phone.py-->line:36] - ERROR: 用例--App验证手机号-手机号为空--执行未通过
+2020-04-23 10:11:55,433 -- [test_phone.py-->line:37] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 10:11:55,433 -- [test_phone.py-->line:38] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587607915.1843, 'endtime': 1587607915.1929}
+2020-04-23 10:11:55,433 -- [test_phone.py-->line:39] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_phone.py", line 32, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 10:11:55,521 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-QueryType为空--执行通过
+2020-04-23 10:11:55,605 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-AppName为空--执行通过
+2020-04-23 10:11:55,667 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-不传QueryType--执行通过
+2020-04-23 10:11:55,735 -- [test_phone.py-->line:44] - INFO: 用例--App验证手机号-不传Params--执行通过
+2020-04-23 10:11:55,811 -- [test_phone.py-->line:36] - ERROR: 用例--App验证手机号-企业号为空--执行未通过
+2020-04-23 10:11:55,811 -- [test_phone.py-->line:37] - DEBUG: 预期结果：{'result': '0001', 'msg': '验证失败'}
+2020-04-23 10:11:55,811 -- [test_phone.py-->line:38] - DEBUG: 实际结果：{'result': '0000', 'msg': '验证成功', 'data': [], 'starttime': 1587607915.5629, 'endtime': 1587607915.5714}
+2020-04-23 10:11:55,811 -- [test_phone.py-->line:39] - ERROR: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_phone.py", line 32, in test_phone
+    self.assertEqual(expected["result"], res["result"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '0001' != '0000'
+- 0001
+?    ^
++ 0000
+?    ^
+
+2020-04-23 10:11:56,891 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-验证成功--执行通过
+2020-04-23 10:11:56,958 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-密码为空--执行通过
+2020-04-23 10:11:57,029 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-企业号为空--执行通过
+2020-04-23 10:11:57,096 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-手机号为空--执行通过
+2020-04-23 10:11:57,173 -- [test_pwd.py-->line:52] - INFO: 用例--App验证密码-设备号为空--执行通过
+2020-04-23 10:11:57,191 -- [run_test.py-->line:20] - INFO: ---------------测试用例执行完毕,正在发送邮件,请注意查收-----------------------

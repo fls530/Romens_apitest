@@ -13,7 +13,7 @@ filename = os.path.join(DATA_DIR, "testcase.xlsx")
 
 
 @ddt
-class OrgguidTestCase(unittest.TestCase):
+class PhoneTestCase(unittest.TestCase):
     excel = HandleExcel(filename, "PHONE")
     cases = excel.read_data()
 

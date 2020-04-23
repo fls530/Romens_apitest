@@ -15,6 +15,6 @@ suite.addTest(loader.discover(CASE_DIR))
 # 执行用例生成报告
 bf = BeautifulReport(suite)
 
-bf.report("注册接口", filename="report.html", report_dir=REPORT_DIR)
+bf.report("接口自动化", filename="report.html", report_dir=REPORT_DIR)
 
 log.info("---------------测试用例执行完毕,正在发送邮件,请注意查收-----------------------")
