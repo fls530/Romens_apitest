@@ -6,7 +6,6 @@ from common.handle_config import conf
 from requests import request
 
 
-
 class EnvData:
     """定义一个类，用来保存用例执行过程中，提取出来的数据（当成环境变量的容器）"""
     pass
@@ -58,7 +57,6 @@ def login():
                                                      encode('utf-8'))).replace('=', '-').replace('+', '_')
     except Exception as e:
         raise e
-
     return token
 
 
@@ -77,8 +75,3 @@ def getdata(case):
     expected = expectedResult
 
     return method, headers, url, data, row, expected
-
-
-
-
-
