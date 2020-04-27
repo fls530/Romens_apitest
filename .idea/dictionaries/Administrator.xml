@@ -3,8 +3,10 @@
     <words>
       <w>asctime</w>
       <w>deviceid</w>
+      <w>erpcode</w>
       <w>getconfig</w>
       <w>getversion</w>
+      <w>memberid</w>
       <w>orgguid</w>
       <w>romens</w>
       <w>testcase</w>
