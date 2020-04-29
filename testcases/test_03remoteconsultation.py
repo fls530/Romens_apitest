@@ -9,6 +9,7 @@ from common.handle_logging import log
 from common.handle_path import DATA_DIR
 from common.handle_data import getdata, login, EnvData
 
+
 filename = os.path.join(DATA_DIR, "remote.xlsx")
 
 
@@ -296,8 +297,9 @@ class test_07addAppointmentListTestCase(unittest.TestCase):
         headers3 = eval(conf.get("env", "headers"))
         data3 = {"QueryType": "syncDoctorList",
                  "Params": '{"ORGID":"' + str(EnvData.code)[0:6] + '",'
-                           '"ORDER_CODE":"' + EnvData.code + '",'
-                           '"EFFID":"' + EnvData.GUID + '"', "UserGuid": login()}
+                                                                   '"ORDER_CODE":"' + EnvData.code + '",'
+                                                                                                     '"EFFID":"' + EnvData.GUID + '"',
+                 "UserGuid": login()}
         res3 = (request(url=url3, method=method3, data=data3, headers=headers3)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.DOCTORID = jsonpath.jsonpath(res3, "$..GUID")[0]

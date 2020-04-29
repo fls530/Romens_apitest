@@ -4,6 +4,7 @@ import re
 import jsonpath
 from common.handle_config import conf
 from requests import request
+import datetime
 
 
 class EnvData:
@@ -75,3 +76,10 @@ def getdata(case):
     expected = expectedResult
 
     return method, headers, url, data, row, expected
+
+
+def getYesterday():
+    today = datetime.date.today()
+    oneday = datetime.timedelta(days=1)
+    yesterday = today - oneday
+    return yesterday
