@@ -78,3 +78,39 @@ class test_02getDataListTestCase(unittest.TestCase):
             # 结果回写excel中
             log.info("用例--{}--执行通过".format(case["title"]))
             self.excel.write_data(row=row, column=8, value="通过")
+
+
+@ddt
+class test_03importDataTestCase(unittest.TestCase):
+    excel = HandleExcel(filename, "importData")
+    cases = excel.read_data()
+
+    @data(*cases)
+    def test_importData(self, case):
+        se = Session()
+        # 准备用例数据
+        login_url = "http://doctor.yy365.cn/index/login"
+        login_data = {
+            "username": conf.get("test_data", "admin_user"),
+            "password": conf.get("test_data", "admin_pwd")}
+        response = se.post(url=login_url, data=login_data)
+        url1 = conf.get("env", "url") + case["url"]
+        file = {'excel': ("891407.xls", open(os.path.join(DATA_DIR, "Administrator.xlsx"), "rb"), "excel/xls")}
+        response2 = se.post(url=url1, files=file, verify=False)
+        res = response2.json()
+        row = case["case_id"] + 1
+        expected = eval(case["expected"])
+        try:
+            self.assertEqual(expected["CODE"], res["CODE"])
+        except AssertionError as e:
+            # 结果回写excel中
+            log.error("用例--{}--执行未通过".format(case["title"]))
+            log.debug("预期结果：{}".format(expected))
+            log.debug("实际结果：{}".format(res))
+            log.exception(e)
+            self.excel.write_data(row=row, column=8, value="未通过")
+            raise e
+        else:
+            # 结果回写excel中
+            log.info("用例--{}--执行通过".format(case["title"]))
+            self.excel.write_data(row=row, column=8, value="通过")
