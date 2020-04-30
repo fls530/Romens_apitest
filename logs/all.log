@@ -774,3 +774,95 @@ teamcity.diff_tools.EqualsAssertionError:  :: 0000 != 0001
 2020-04-28 17:42:25,779 -- [test_01doctor.py-->line:177] - INFO: 用例--修改问诊的预约状态-修改成功--执行通过
 2020-04-28 17:42:25,874 -- [test_01doctor.py-->line:205] - INFO: 用例--搜索西药处方药品-获取成功--执行通过
 2020-04-28 17:42:26,009 -- [test_01doctor.py-->line:239] - INFO: 用例--搜索膏方处方药-获取成功--执行通过
+2020-04-30 09:11:38,662 -- [test_02administrator.py-->line:41] - INFO: 用例--管理员登录-登陆成功--执行通过
+2020-04-30 10:47:55,789 -- [test_02administrator.py-->line:43] - INFO: 用例--管理员登录-登陆成功--执行通过
+2020-04-30 10:48:30,902 -- [test_02administrator.py-->line:43] - INFO: 用例--管理员登录-登陆成功--执行通过
+2020-04-30 10:48:31,031 -- [test_02administrator.py-->line:71] - ERROR: 用例--获取门店列表-登陆成功--执行未通过
+2020-04-30 10:48:31,031 -- [test_02administrator.py-->line:72] - DEBUG: 预期结果：{'draw': 0}
+2020-04-30 10:48:31,031 -- [test_02administrator.py-->line:73] - DEBUG: 实际结果：{'draw': 0, 'recordsTotal': 10, 'recordsFiltered': '0', 'data': []}
+2020-04-30 10:48:31,031 -- [test_02administrator.py-->line:74] - ERROR:  :: {'draw': 0} != 0
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 832, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: {'draw': 0} != 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02administrator.py", line 68, in test_getDataList
+    self.assertEqual(expected, res["draw"])
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'draw': 0} != 0
+2020-04-30 10:48:39,813 -- [test_02administrator.py-->line:43] - INFO: 用例--管理员登录-登陆成功--执行通过
+2020-04-30 10:48:39,906 -- [test_02administrator.py-->line:71] - ERROR: 用例--获取门店列表-登陆成功--执行未通过
+2020-04-30 10:48:39,906 -- [test_02administrator.py-->line:72] - DEBUG: 预期结果：{'draw': 0}
+2020-04-30 10:48:39,906 -- [test_02administrator.py-->line:73] - DEBUG: 实际结果：{'draw': 0, 'recordsTotal': 10, 'recordsFiltered': '0', 'data': []}
+2020-04-30 10:48:39,906 -- [test_02administrator.py-->line:74] - ERROR:  :: {'draw': 0} != 0
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 832, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: {'draw': 0} != 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02administrator.py", line 68, in test_getDataList
+    self.assertEqual(expected, res["draw"])
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'draw': 0} != 0
+2020-04-30 10:49:08,869 -- [test_02administrator.py-->line:43] - INFO: 用例--管理员登录-登陆成功--执行通过
+2020-04-30 10:49:08,977 -- [test_02administrator.py-->line:71] - ERROR: 用例--获取门店列表-登陆成功--执行未通过
+2020-04-30 10:49:08,977 -- [test_02administrator.py-->line:72] - DEBUG: 预期结果：{'draw': '0'}
+2020-04-30 10:49:08,977 -- [test_02administrator.py-->line:73] - DEBUG: 实际结果：{'draw': 0, 'recordsTotal': 10, 'recordsFiltered': '0', 'data': []}
+2020-04-30 10:49:08,977 -- [test_02administrator.py-->line:74] - ERROR:  :: {'draw': '0'} != 0
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 832, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: {'draw': '0'} != 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02administrator.py", line 68, in test_getDataList
+    self.assertEqual(expected, res["draw"])
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'draw': '0'} != 0
+2020-04-30 10:49:26,264 -- [test_02administrator.py-->line:71] - ERROR: 用例--获取门店列表-登陆成功--执行未通过
+2020-04-30 10:49:26,264 -- [test_02administrator.py-->line:72] - DEBUG: 预期结果：{'draw': '0'}
+2020-04-30 10:49:26,264 -- [test_02administrator.py-->line:73] - DEBUG: 实际结果：{'draw': 0, 'recordsTotal': 10, 'recordsFiltered': '0', 'data': []}
+2020-04-30 10:49:26,264 -- [test_02administrator.py-->line:74] - ERROR:  :: {'draw': '0'} != 0
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 832, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: {'draw': '0'} != 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02administrator.py", line 68, in test_getDataList
+    self.assertEqual(expected, res["draw"])
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'draw': '0'} != 0
+2020-04-30 10:50:53,492 -- [test_02administrator.py-->line:79] - INFO: 用例--获取门店列表-登陆成功--执行通过
+2020-04-30 10:51:21,944 -- [test_02administrator.py-->line:43] - INFO: 用例--管理员登录-登陆成功--执行通过
+2020-04-30 10:51:22,048 -- [test_02administrator.py-->line:79] - INFO: 用例--获取门店列表-登陆成功--执行通过
