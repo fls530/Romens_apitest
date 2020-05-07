@@ -866,3 +866,99 @@ teamcity.diff_tools.EqualsAssertionError:  :: {'draw': '0'} != 0
 2020-04-30 10:50:53,492 -- [test_02administrator.py-->line:79] - INFO: 用例--获取门店列表-登陆成功--执行通过
 2020-04-30 10:51:21,944 -- [test_02administrator.py-->line:43] - INFO: 用例--管理员登录-登陆成功--执行通过
 2020-04-30 10:51:22,048 -- [test_02administrator.py-->line:79] - INFO: 用例--获取门店列表-登陆成功--执行通过
+2020-05-07 09:38:41,157 -- [test_02administrator.py-->line:120] - INFO: 用例--导入门店-导入成功--执行通过
+2020-05-07 10:08:16,316 -- [test_02administrator.py-->line:120] - INFO: 用例--导入门店-导入成功--执行通过
+2020-05-07 10:20:18,957 -- [test_02administrator.py-->line:148] - ERROR: 用例--导入门店-导入成功--执行未通过
+2020-05-07 10:20:18,958 -- [test_02administrator.py-->line:149] - DEBUG: 预期结果：{'draw': '0'}
+2020-05-07 10:20:18,958 -- [test_02administrator.py-->line:150] - DEBUG: 实际结果：{'draw': 0, 'recordsTotal': 10, 'recordsFiltered': '1', 'data': [{'GUID': 'c9b20c16164cba13423a0fa8aae4696b', 'CODE': '00000002@romens.cn', 'NAME': '雨诺药房二分店', 'CREATEDATE': '2019-04-16 19:15:07', 'ADDRESSCODE': '370000/370200/370202', 'LOGINID': None, 'ADDRESS': '山东省/青岛市/市南区', 'ADDRESSDETAILED': '软件园', 'AUDITING': '1', 'PHONE': '15589856997', 'DEVICEID': None}]}
+2020-05-07 10:20:18,959 -- [test_02administrator.py-->line:151] - ERROR:  :: 0 != 0
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 832, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: '0' != 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02administrator.py", line 145, in test_getDataListByChild
+    self.assertEqual(expected["draw"], res["draw"])
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 0 != 0
+2020-05-07 10:20:38,003 -- [test_02administrator.py-->line:156] - INFO: 用例--导入门店-导入成功--执行通过
+2020-05-07 11:16:14,735 -- [test_02administrator.py-->line:193] - INFO: 用例--获取药师列表-获取成功--执行通过
+2020-05-07 15:28:59,153 -- [test_02administrator.py-->line:222] - ERROR: 用例--获取药师列表-获取成功--执行未通过
+2020-05-07 15:28:59,160 -- [test_02administrator.py-->line:223] - DEBUG: 预期结果：{'draw': 1}
+2020-05-07 15:28:59,161 -- [test_02administrator.py-->line:224] - DEBUG: 实际结果：{'draw': 0, 'recordsTotal': 10, 'recordsFiltered': '11', 'data': [{'GUID': 'fb9e306e18d36a844e298c3e68b54c79', 'ORGGUID': '186990', 'NAME': '朱甜甜', 'PHONE': '15266259545', 'CODE': '123456', 'SEX': '1', 'IMGURL': 'http://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/186990/avatar/2020/04/08/5e8d425c5cfb09954.png?imageView2/0/w/2400/format/png/q/100', 'CERTURL': '', 'INTRODUCT': '', 'CREATEDATE': '2020-04-07 17:18:16', 'PWD': '0', 'DEPARTS': '""', 'SIGNURL': 'http://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/186990/PharmacistSignature/2020/04/20/5e9d6fac1ee265175.png?imageView2/0/w/2400/format/png/q/100', 'WORKSTATE': '2', 'TYPE': '1', 'STATE': '1', 'identityfront': '', 'identityrear': '', 'FINGEPRINT': '', 'REGISTERURL': '', 'CERTNUM': '', 'REGISTTERNUM': '', 'REGISTERDATE': '', 'REGISTEREFF': '', 'IDCARD': '', 'IPADDRESS': ''}, {'GUID': '19b411b0db791c1009351ca7e3d5ef08', 'ORGGUID': '186990', 'NAME': '范珑生', 'PHONE': '125433697645', 'CODE': '05326666', 'SEX': '0', 'IMGURL': 'http://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/5e041ac2097854479.png?imageView2/0/w/2400/format/png/q/100', 'CERTURL': '', 'INTRODUCT': '1', 'CREATEDATE': '2019-12-26 10:45:07', 'PWD': '0', 'DEPARTS': '""', 'SIGNURL': 'https://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/186990/PharmacistSignature/2020/02/28/5e5876133a3d24510.png?imageView2/0/w/2400/format/png/q/100', 'WORKSTATE': '2', 'TYPE': '1', 'STATE': '1', 'identityfront': 'https://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/186990/idcard/2020/02/28/5e58a2f891cda6052.png?imageView2/0/w/2400/format/png/q/100', 'identityrear': 'https://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/186990/idcard/2020/02/28/5e58a2fbe3ccf1367.png?imageView2/0/w/2400/format/png/q/100', 'FINGEPRINT': '', 'REGISTERURL': 'http://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/5e041affded221704.png?imageView2/0/w/2400/format/png/q/100', 'CERTNUM': '1', 'REGISTTERNUM': '1', 'REGISTERDATE': '', 'REGISTEREFF': '', 'IDCARD': '320321199102147219', 'IPADDRESS': '1'}, {'GUID': '0aaab3a7c98dd09932070a1b42b53666', 'ORGGUID': '186990', 'NAME': '小明', 'PHONE': '17863252570', 'CODE': '1', 'SEX': '1', 'IMGURL': '', 'CERTURL': '', 'INTRODUCT': '执业药师', 'CREATEDATE': '2019-10-23 10:57:22', 'PWD': '000000', 'DEPARTS': '""', 'SIGNURL': 'http://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/5e55e4c239aa41945.png?imageView2/0/w/2400/format/png/q/100', 'WORKSTATE': '2', 'TYPE': '1', 'STATE': '1', 'identityfront': '', 'identityrear': '', 'FINGEPRINT': '', 'REGISTERURL': 'https://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/5e045ee56ed1c8565.png?imageView2/0/w/2400/format/png/q/100', 'CERTNUM': '', 'REGISTTERNUM': '', 'REGISTERDATE': '2020-02-06', 'REGISTEREFF': '2020-02-16', 'IDCARD': '370829199511146222', 'IPADDRESS': ''}, {'GUID': '0595ae21131cdfe6cbb83d71eea558ab', 'ORGGUID': '186990', 'NAME': '梨石真', 'PHONE': '15764236601', 'CODE': '009988', 'SEX': '0', 'IMGURL': 'https://appshop-10034140.image.myqcloud.com/5d55050b343e71976.png?imageView2/0/w/2400/format/png/q/100', 'CERTURL': 'https://appshop-10034140.image.myqcloud.com/5d5505132d9ed6772.png?imageView2/0/w/2400/format/png/q/100', 'INTRODUCT': '中药药师', 'CREATEDATE': '2019-08-15 10:11:26', 'PWD': '0', 'DEPARTS': '""', 'SIGNURL': 'https://appshop-10034140.image.myqcloud.com/5d76059b90c117597.png?imageView2/0/w/2400/format/png/q/100', 'WORKSTATE': '1', 'TYPE': '1', 'STATE': '1', 'identityfront': '', 'identityrear': '', 'FINGEPRINT': '', 'REGISTERURL': '', 'CERTNUM': '', 'REGISTTERNUM': '', 'REGISTERDATE': '', 'REGISTEREFF': '', 'IDCARD': '372922199102129002', 'IPADDRESS': ''}, {'GUID': '5939ab5e666a4809a44462eca36517e6', 'ORGGUID': '186990', 'NAME': '李药师', 'PHONE': '15275218769', 'CODE': '15786', 'SEX': '0', 'IMGURL': 'https://appshop-10034140.image.myqcloud.com/5d9fe58492d278286.png?imageView2/0/w/2400/format/png/q/100', 'CERTURL': 'http://appshop-10034140.image.myqcloud.com/5d2fdaa0b04404253.png?imageView2/0/w/2400/format/png/q/100', 'INTRODUCT': '执业药师', 'CREATEDATE': '2019-07-18 10:33:02', 'PWD': '000000', 'DEPARTS': '""', 'SIGNURL': 'http://appshop-10034140.image.myqcloud.com/5d2fdb2b434bd1790.png?imageView2/0/w/2400/format/png/q/100', 'WORKSTATE': '2', 'TYPE': '1', 'STATE': '1', 'identityfront': '', 'identityrear': '', 'FINGEPRINT': '', 'REGISTERURL': '', 'CERTNUM': '', 'REGISTTERNUM': '', 'REGISTERDATE': '', 'REGISTEREFF': '', 'IDCARD': '370829199511146222', 'IPADDRESS': ''}, {'GUID': '113112887b404b19346dc19d1da4bed0', 'ORGGUID': '186990', 'NAME': '张药师', 'PHONE': '15764236500', 'CODE': '123000', 'SEX': '0', 'IMGURL': 'http://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/5e05bd64175a59620.png?imageView2/0/w/2400/format/png/q/100', 'CERTURL': 'http://appshop-10034140.image.myqcloud.com/5d2fdaaaa8d886109.png?imageView2/0/w/2400/format/png/q/100', 'INTRODUCT': '执业药师', 'CREATEDATE': '2019-07-16 17:54:16', 'PWD': '000000', 'DEPARTS': '""', 'SIGNURL': 'http://appshop-10034140.image.myqcloud.com/5d2d9ec44bc549446.png?imageView2/0/w/2400/format/png/q/100', 'WORKSTATE': '2', 'TYPE': '1', 'STATE': '1', 'identityfront': '', 'identityrear': '', 'FINGEPRINT': 'http://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/1577688326704-7C4F5CAA-08E8-4BEF-A1BA-E95BEF6A3E62.png', 'REGISTERURL': '', 'CERTNUM': '', 'REGISTTERNUM': '', 'REGISTERDATE': '', 'REGISTEREFF': '', 'IDCARD': '', 'IPADDRESS': ''}, {'GUID': '0394b18178856777519de40f445b6c38', 'ORGGUID': '186990', 'NAME': '刘药师', 'PHONE': '15764236490', 'CODE': '002288', 'SEX': '0', 'IMGURL': 'http://appshop-10034140.image.myqcloud.com/5d2fda34cb4876503.png?imageView2/0/w/2400/format/png/q/100', 'CERTURL': 'http://appshop-10034140.image.myqcloud.com/5d2fdab658e869314.png?imageView2/0/w/2400/format/png/q/100', 'INTRODUCT': '执业药师', 'CREATEDATE': '2019-07-16 17:51:19', 'PWD': '000000', 'DEPARTS': '""', 'SIGNURL': 'http://appshop-10034140.image.myqcloud.com/5d2d9e0e20c0b1281.png?imageView2/0/w/2400/format/png/q/100', 'WORKSTATE': '2', 'TYPE': '1', 'STATE': '1', 'identityfront': '', 'identityrear': '', 'FINGEPRINT': '', 'REGISTERURL': '', 'CERTNUM': '', 'REGISTTERNUM': '', 'REGISTERDATE': '', 'REGISTEREFF': '', 'IDCARD': '', 'IPADDRESS': ''}, {'GUID': '5f647c89d84d1db83445bfcb55665394', 'ORGGUID': '186990', 'NAME': '向斌1', 'PHONE': '13553093138', 'CODE': '1002', 'SEX': '0', 'IMGURL': None, 'CERTURL': None, 'INTRODUCT': '执业药师', 'CREATEDATE': '2019-07-12 14:50:13', 'PWD': '000000', 'DEPARTS': None, 'SIGNURL': '', 'WORKSTATE': '2', 'TYPE': '0', 'STATE': '2', 'identityfront': '', 'identityrear': '', 'FINGEPRINT': None, 'REGISTERURL': '', 'CERTNUM': '', 'REGISTTERNUM': '', 'REGISTERDATE': '', 'REGISTEREFF': '', 'IDCARD': '', 'IPADDRESS': ''}, {'GUID': '821c7279322794002715b089aa759b6b', 'ORGGUID': '186990', 'NAME': '张三', 'PHONE': '13553093137', 'CODE': '1001', 'SEX': '0', 'IMGURL': None, 'CERTURL': None, 'INTRODUCT': '执业药师', 'CREATEDATE': '2019-07-12 14:50:13', 'PWD': '000000', 'DEPARTS': None, 'SIGNURL': '', 'WORKSTATE': '2', 'TYPE': '0', 'STATE': '2', 'identityfront': '', 'identityrear': '', 'FINGEPRINT': None, 'REGISTERURL': '', 'CERTNUM': '', 'REGISTTERNUM': '', 'REGISTERDATE': '', 'REGISTEREFF': '', 'IDCARD': '', 'IPADDRESS': ''}, {'GUID': '96768c93a86f3c5cf8dbbda871994bff', 'ORGGUID': '186990', 'NAME': '王药师', 'PHONE': '19862207089', 'CODE': '002', 'SEX': '0', 'IMGURL': 'http://ycwz-doc-1252032681.cos.ap-beijing.myqcloud.com/5e02b70c6a7215458.png?imageView2/0/w/2400/format/png/q/100', 'CERTURL': 'http://appshop-10034140.image.myqcloud.com/5ccfa1080fe895842.png?imageView2/0/w/2400/format/png/q/100', 'INTRODUCT': '西药药师', 'CREATEDATE': '2019-05-06 10:50:59', 'PWD': '000000', 'DEPARTS': '""', 'SIGNURL': 'http://appshop-10034140.image.myqcloud.com/5ce360ae466737262.png?imageView2/0/w/2400/format/png/q/100', 'WORKSTATE': '2', 'TYPE': '1', 'STATE': '1', 'identityfront': '', 'identityrear': '', 'FINGEPRINT': '', 'REGISTERURL': '', 'CERTNUM': '', 'REGISTTERNUM': '', 'REGISTERDATE': '', 'REGISTEREFF': '', 'IDCARD': '', 'IPADDRESS': ''}]}
+2020-05-07 15:28:59,166 -- [test_02administrator.py-->line:225] - ERROR:  :: 1 != 0
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 832, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02administrator.py", line 219, in test_getlist
+    self.assertEqual(expected["draw"], res["draw"])
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 1 != 0
+2020-05-07 15:29:51,110 -- [test_02administrator.py-->line:230] - INFO: 用例--获取药师列表-获取成功--执行通过
+2020-05-07 16:15:48,615 -- [test_02administrator.py-->line:230] - INFO: 用例--获取药师列表-获取成功--执行通过
+2020-05-07 16:18:10,657 -- [test_02administrator.py-->line:259] - ERROR: 用例--获取处方单列表-获取成功--执行未通过
+2020-05-07 16:18:10,657 -- [test_02administrator.py-->line:260] - DEBUG: 预期结果：{'draw': 0}
+2020-05-07 16:18:10,658 -- [test_02administrator.py-->line:261] - DEBUG: 实际结果：{'draw': '1', 'recordsTotal': 10, 'recordsFiltered': '0', 'data': []}
+2020-05-07 16:18:10,658 -- [test_02administrator.py-->line:262] - ERROR:  :: 0 != 1
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 832, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != '1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02administrator.py", line 256, in test_getData
+    self.assertEqual(expected["draw"], res["draw"])
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 0 != 1
+2020-05-07 16:18:38,127 -- [test_02administrator.py-->line:259] - ERROR: 用例--获取处方单列表-获取成功--执行未通过
+2020-05-07 16:18:38,128 -- [test_02administrator.py-->line:260] - DEBUG: 预期结果：{'draw': 1}
+2020-05-07 16:18:38,128 -- [test_02administrator.py-->line:261] - DEBUG: 实际结果：{'draw': '1', 'recordsTotal': 10, 'recordsFiltered': '0', 'data': []}
+2020-05-07 16:18:38,128 -- [test_02administrator.py-->line:262] - ERROR:  :: 1 != 1
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\unittest\case.py", line 832, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != '1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Romens_Api_Test\testcases\test_02administrator.py", line 256, in test_getData
+    self.assertEqual(expected["draw"], res["draw"])
+  File "C:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 1 != 1
+2020-05-07 16:19:03,113 -- [test_02administrator.py-->line:267] - INFO: 用例--获取处方单列表-获取成功--执行通过
+2020-05-07 16:28:01,916 -- [test_02administrator.py-->line:304] - INFO: 用例--获取门店开方量列表-获取成功--执行通过
+2020-05-07 16:30:42,178 -- [test_02administrator.py-->line:340] - INFO: 用例--获取医生开方量列表-获取成功--执行通过
+2020-05-07 16:34:26,878 -- [test_02administrator.py-->line:378] - INFO: 用例--获取药师开方量列表-获取成功--执行通过
+2020-05-07 16:42:10,063 -- [test_02administrator.py-->line:414] - INFO: 用例--获取预约列表数据-获取成功--执行通过
+2020-05-07 16:46:03,490 -- [test_02administrator.py-->line:451] - INFO: 用例--获取商品列表数据-获取成功--执行通过
