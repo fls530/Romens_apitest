@@ -962,3 +962,10 @@ teamcity.diff_tools.EqualsAssertionError:  :: 1 != 1
 2020-05-07 16:34:26,878 -- [test_02administrator.py-->line:378] - INFO: 用例--获取药师开方量列表-获取成功--执行通过
 2020-05-07 16:42:10,063 -- [test_02administrator.py-->line:414] - INFO: 用例--获取预约列表数据-获取成功--执行通过
 2020-05-07 16:46:03,490 -- [test_02administrator.py-->line:451] - INFO: 用例--获取商品列表数据-获取成功--执行通过
+2020-05-08 15:47:21,123 -- [test_03pharmacist.py-->line:37] - INFO: 用例--药师登录-验证成功--执行通过
+2020-05-08 16:11:51,905 -- [test_03pharmacist.py-->line:76] - INFO: 用例--人脸验证-获取成功--执行通过
+2020-05-08 16:20:26,063 -- [test_02administrator.py-->line:341] - INFO: 用例--获取医生开方量列表-获取成功--执行通过
+2020-05-08 16:20:54,721 -- [test_03pharmacist.py-->line:76] - INFO: 用例--人脸验证-获取成功--执行通过
+2020-05-08 16:26:45,409 -- [test_03pharmacist.py-->line:114] - INFO: 用例--保存药师人脸信息-获取成功--执行通过
+2020-05-08 16:43:43,418 -- [test_03pharmacist.py-->line:148] - INFO: 用例--获取药师工作状态-修改成功--执行通过
+2020-05-08 16:48:32,465 -- [test_03pharmacist.py-->line:185] - INFO: 用例--设置药师工作状态请求-设置成功--执行通过

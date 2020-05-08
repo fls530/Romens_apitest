@@ -321,7 +321,7 @@ class test_09getDoctorOrderTestCase(unittest.TestCase):
             "password": conf.get("test_data", "admin_pwd")}
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
-        data1 = {"start": '', "end": '', "doctor": '', "type": 1}
+        data1 = {"start": '', "end": '', "pharmacist": '', "type": 1}
         response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
