@@ -399,7 +399,7 @@ class test_12saveOrderSignUrlTestCase(unittest.TestCase):
         url = conf.get("env", "url") + "/Inquiry"
         method = "post"
         headers = eval(conf.get("env", "headers"))
-        data = {"QueryType": "getOnlineOrder", "Params": '{"page":1}', "UserGuid": login()}
+        data = {"QueryType": "getOnlineOrder", "Params": '{"page":0}', "UserGuid": login()}
         res = (request(url=url, method=method, data=data, headers=headers)).json()
         # 提取会员编号作为类属性
         EnvData.guid = jsonpath.jsonpath(res, "$..ID")[0]

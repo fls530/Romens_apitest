@@ -101,7 +101,6 @@ class test_03importDataTestCase(unittest.TestCase):
         headers = {"Content-Type": "multipart/form-data"}
         file = {'file': open(r"C:\Users\Administrator\Desktop\Romens_Api_Test\data\891407.xls", 'rb')}
         response2 = se.post(url=url1, files=file, verify=False, headers=headers)
-        print(response2.status_code)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])

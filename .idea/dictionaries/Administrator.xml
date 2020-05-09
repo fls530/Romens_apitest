@@ -4,9 +4,13 @@
       <w>asctime</w>
       <w>deviceid</w>
       <w>erpcode</w>
+      <w>getapproved</w>
       <w>getconfig</w>
+      <w>gethistory</w>
+      <w>getnoapproved</w>
       <w>getversion</w>
       <w>memberid</w>
+      <w>noapproved</w>
       <w>ordon</w>
       <w>orgguid</w>
       <w>phar</w>
