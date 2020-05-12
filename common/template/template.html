@@ -667,13 +667,13 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 }
 
 .btn-primary {
-	background-color: #6ca745;
+	background-color: ${btn-expand};
 	border-color: rgba(255,255,255,0);
 	color: #FFF
 }
 
 .btn-primary.active,.btn-primary:active,.btn-primary:focus,.btn-primary:active:focus,.btn-primary:hover,.btn-primary:active:hover,.open .dropdown-toggle.btn-primary {
-	background-color: #568637;
+	background-color: ${btn-expand-active};
 	border-color: rgba(255,255,255,0);
 	color: #fff
 }
@@ -772,13 +772,13 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 }
 
 .btn-danger {
-	background-color: #F25929;
+	background-color: ${btn-collapse};
 	border-color: rgba(255,255,255,0);
 	color: #FFF
 }
 
 .btn-danger.active,.btn-danger:active,.btn-danger:focus,.btn-danger:hover,.btn-danger:active:focus,.btn-danger:active:hover,.open .dropdown-toggle.btn-danger {
-	background-color: #CA390C;
+	background-color: ${btn-collapse-active};
 	border-color: rgba(255,255,255,0);
 	color: #FFF
 }
@@ -3714,7 +3714,7 @@ table.table-mail tr td {
 }
 
 .text-navy {
-	color: #70AD47
+	color: ${color-pass}
 }
 
 .text-primary {
@@ -3722,19 +3722,19 @@ table.table-mail tr td {
 }
 
 .text-success {
-	color: #70AD47
+	color: ${color-pass}
 }
 
 .text-info {
-	color: #555
+	color: ${color-info}
 }
 
 .text-warning {
-	color: #777777
+	color: ${color-skip}
 }
 
 .text-danger {
-	color: #F25929
+	color: ${color-fail}
 }
 
 .text-muted {
@@ -6973,9 +6973,9 @@ body.skin-3 {
     outline: 5px auto;
 }
 .chosen-container .chosen-results li.highlighted {
-  background-color: #70AD47;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #70AD47), color-stop(90%, #70AD47));
-  background-image: linear-gradient(#70AD47 20%, #70AD47 90%);
+  background-color: ${color-banner};
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, ${color-banner}), color-stop(90%, ${color-banner}));
+  background-image: linear-gradient(${color-banner} 20%, ${color-banner} 90%);
   color: #fff;
 }
     </style>
@@ -6983,7 +6983,7 @@ body.skin-3 {
 <body class="gray-bg">
 <div class="row  border-bottom white-bg dashboard-header">
     <div class="col-sm-12 text-center">
-        <span style="color: #70AD47; font-size: 25px; font-weight: 700">测试报告</span>
+        <span style="${title}">测试报告</span>
     </div>
 </div>
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -6991,7 +6991,7 @@ body.skin-3 {
         <div class="col-sm-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5 style="color: #c4c4c4; font-size: 16px">报告汇总</h5>
+                    <h5 style="${sub-title}">报告汇总</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -7067,7 +7067,7 @@ body.skin-3 {
         <div class="col-sm-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5 style="color: #c4c4c4; font-size: 16px">详细数据</h5>
+                    <h5 style="${sub-title}">详细数据</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -7078,7 +7078,7 @@ body.skin-3 {
                     </div>
                 </div>
                 <div class="ibox-content">
-                    <div class="input-group panel-heading" style="width: 100%; background-color: #70AD47; margin-bottom: 10px; text-align: left; font-family: Consolas;">
+                    <div class="input-group panel-heading" style="width: 100%; background-color: ${color-banner}; margin-bottom: 10px; text-align: left; font-family: Consolas;">
                         <label style="color: snow">测试类:</label>
                         <select class="chosen-select form-control" data-placeholder="ALL" style="width: 300px;" name="filterClass" id="filterClass">
                             <option value="">ALL</option>
@@ -7158,980 +7158,7 @@ body.skin-3 {
     }
 
 
-    var resultData = {
-    "testPass": 96,
-    "testResult": [
-        {
-            "className": "test_01UserLoginByPwdTestCase",
-            "methodName": "test_UserLoginByPwd_1",
-            "description": "医生登录-验证成功",
-            "spendTime": "0.385 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02getDoctorInfoTestCase",
-            "methodName": "test_getDoctorInfo_1",
-            "description": "获取医生的问诊信息-获取成功",
-            "spendTime": "0.0997 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03syncAppointmentListTestCase",
-            "methodName": "test_syncAppointmentList_1",
-            "description": "获取待接诊人员列表-获取成功",
-            "spendTime": "0.0957 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_04changeDoctorWorkStateTestCase",
-            "methodName": "test_changeDoctorWorkState_1",
-            "description": "更新医生工作状态-修改成功",
-            "spendTime": "0.213 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_05createChatRoomTestCase",
-            "methodName": "test_createChatRoom_1",
-            "description": "创建房间-修改成功",
-            "spendTime": "0.409 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_06syncAppointmentInfoTestCase",
-            "methodName": "test_syncAppointmentInfo_1",
-            "description": "修改问诊的预约状态-修改成功",
-            "spendTime": "0.103 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_07getDrugInfoByNameTestCase",
-            "methodName": "test_getDrugInfoByName_1",
-            "description": "搜索西药处方药品-获取成功",
-            "spendTime": "0.113 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_08getPasteListTestCase",
-            "methodName": "test_getPasteList_1",
-            "description": "搜索膏方处方药-获取成功",
-            "spendTime": "0.135 s",
-            "status": "成功",
-            "log": [
-                "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\urllib3\\connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings",
-                "  InsecureRequestWarning)",
-                ""
-            ]
-        },
-        {
-            "className": "test_01loginTestCase",
-            "methodName": "test_login_1",
-            "description": "管理员登录-登陆成功",
-            "spendTime": "0.0978 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02getDataListTestCase",
-            "methodName": "test_getDataList_1",
-            "description": "获取门店列表-登陆成功",
-            "spendTime": "0.143 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03importDataTestCase",
-            "methodName": "test_importData_1",
-            "description": "导入门店-导入成功",
-            "spendTime": "0.136 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_04getDataListByChildTestCase",
-            "methodName": "test_getDataListByChild_1",
-            "description": "子账号获取-获取成功",
-            "spendTime": "0.143 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_05getDoctorInfoTestCase",
-            "methodName": "test_getDoctorInfo_1",
-            "description": "获取医师列表-获取成功",
-            "spendTime": "0.161 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_06getlistTestCase",
-            "methodName": "test_getlist_1",
-            "description": "获取药师列表-获取成功",
-            "spendTime": "0.164 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_07getDataTestCase",
-            "methodName": "test_getData_1",
-            "description": "获取处方单列表-获取成功",
-            "spendTime": "0.146 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_08getShopOrderTestCase",
-            "methodName": "test_getShopOrder_1",
-            "description": "获取门店开方量列表-获取成功",
-            "spendTime": "0.136 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_09getDoctorOrderTestCase",
-            "methodName": "test_getDoctorOrder_1",
-            "description": "获取医生开方量列表-获取成功",
-            "spendTime": "0.153 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_10getPharmacistOrderTestCase",
-            "methodName": "test_getPharmacistOrder_1",
-            "description": "获取药师开方量列表-获取成功",
-            "spendTime": "0.134 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_11getAppointmentTestCase",
-            "methodName": "test_getAppointment_1",
-            "description": "获取预约列表数据-获取成功",
-            "spendTime": "0.143 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_12getGoodsListTestCase",
-            "methodName": "test_getGoodsList_1",
-            "description": "获取商品列表数据-获取成功",
-            "spendTime": "0.168 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01LoginTestCase",
-            "methodName": "test_Login_1",
-            "description": "药师登录-验证成功",
-            "spendTime": "0.118 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02checkPharCompareFaceTestCase",
-            "methodName": "test_checkPharCompareFace_1",
-            "description": "人脸验证-获取成功",
-            "spendTime": "0.16 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03savePharImgTestCase",
-            "methodName": "test_savePharImg_1",
-            "description": "保存药师人脸信息-获取成功",
-            "spendTime": "0.161 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_04getWorkStateTestCase",
-            "methodName": "test_getWorkState_1",
-            "description": "获取药师工作状态-修改成功",
-            "spendTime": "0.161 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_05setPharWorkStateTestCase",
-            "methodName": "test_setPharWorkState_1",
-            "description": "设置药师工作状态请求-设置成功",
-            "spendTime": "0.315 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_06getDataListTestCase",
-            "methodName": "test_getDataList_1",
-            "description": "获取药师审方列表-获取成功",
-            "spendTime": "0.173 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_07checkPwdTestCase",
-            "methodName": "test_checkPwd_1",
-            "description": "验证药师审核密码-验证成功",
-            "spendTime": "0.163 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_08gethistoryDataListTestCase",
-            "methodName": "test_gethistoryDataList_1",
-            "description": "获取历史处方-获取成功",
-            "spendTime": "0.187 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_09getnoapprovedListTestCase",
-            "methodName": "test_getnoapprovedList_1",
-            "description": "获取药师待审核处方列表-获取成功",
-            "spendTime": "0.164 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_10getapprovedListTestCase",
-            "methodName": "test_getapprovedList_1",
-            "description": "获取药师已审核处方列表-获取成功",
-            "spendTime": "0.164 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_11getOfflineOrderInfoTestCase",
-            "methodName": "test_getOfflineOrderInfo_1",
-            "description": "获取处方详情-获取成功",
-            "spendTime": "0.162 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_12getMedicationInterTestCase",
-            "methodName": "test_getMedicationInter_1",
-            "description": "获取用药咨询列表（实时列表）-获取成功",
-            "spendTime": "0.172 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_13getMedicationHistoryTestCase",
-            "methodName": "test_getMedicationHistory_1",
-            "description": "获取处方详情-获取成功",
-            "spendTime": "0.187 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_14getChatVideoTestCase",
-            "methodName": "test_getChatVideo_1",
-            "description": "获取用药咨询视频-获取成功",
-            "spendTime": "0.201 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_14syncAppointmentInfoTestCase",
-            "methodName": "test_syncAppointmentInfo_1",
-            "description": "接听用药咨询视频-获取成功",
-            "spendTime": "0.175 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_15CloseAppointmentTestCase",
-            "methodName": "test_CloseAppointment_1",
-            "description": "挂断用药咨询视频-挂断成功",
-            "spendTime": "0.353 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01OrgguidTestCase",
-            "methodName": "test_orgguid_1",
-            "description": "App验证企业号-验证成功",
-            "spendTime": "0.0987 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01OrgguidTestCase",
-            "methodName": "test_orgguid_2",
-            "description": "App验证企业号-企业号为空",
-            "spendTime": "0.107 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01OrgguidTestCase",
-            "methodName": "test_orgguid_3",
-            "description": "App验证企业号-QueryType为空",
-            "spendTime": "0.122 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01OrgguidTestCase",
-            "methodName": "test_orgguid_4",
-            "description": "App验证企业号-AppName为空",
-            "spendTime": "0.122 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01OrgguidTestCase",
-            "methodName": "test_orgguid_5",
-            "description": "App验证企业号-不传QueryType",
-            "spendTime": "0.107 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01OrgguidTestCase",
-            "methodName": "test_orgguid_6",
-            "description": "App验证企业号-不传Params",
-            "spendTime": "0.107 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02PhoneTestCase",
-            "methodName": "test_phone_1",
-            "description": "App验证手机号-验证成功",
-            "spendTime": "0.101 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02PhoneTestCase",
-            "methodName": "test_phone_2",
-            "description": "App验证手机号-QueryType为空",
-            "spendTime": "0.102 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02PhoneTestCase",
-            "methodName": "test_phone_3",
-            "description": "App验证手机号-AppName为空",
-            "spendTime": "0.0987 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02PhoneTestCase",
-            "methodName": "test_phone_4",
-            "description": "App验证手机号-不传QueryType",
-            "spendTime": "0.0957 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02PhoneTestCase",
-            "methodName": "test_phone_5",
-            "description": "App验证手机号-不传Params",
-            "spendTime": "0.0998 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03PwdTestCase",
-            "methodName": "test_pwd_1",
-            "description": "App验证密码-验证成功",
-            "spendTime": "0.106 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03PwdTestCase",
-            "methodName": "test_pwd_2",
-            "description": "App验证密码-密码为空",
-            "spendTime": "0.0967 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03PwdTestCase",
-            "methodName": "test_pwd_3",
-            "description": "App验证密码-企业号为空",
-            "spendTime": "0.0947 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03PwdTestCase",
-            "methodName": "test_pwd_4",
-            "description": "App验证密码-手机号为空",
-            "spendTime": "0.0988 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03PwdTestCase",
-            "methodName": "test_pwd_5",
-            "description": "App验证密码-设备号为空",
-            "spendTime": "0.107 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_04GetversionTestCase",
-            "methodName": "test_getversion_1",
-            "description": "获取app版本信息-获取成功",
-            "spendTime": "0.548 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_04GetversionTestCase",
-            "methodName": "test_getversion_2",
-            "description": "获取app版本信息-clienType为空",
-            "spendTime": "0.487 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_04GetversionTestCase",
-            "methodName": "test_getversion_3",
-            "description": "获取app版本信息-build为空",
-            "spendTime": "0.515 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_05getFileUploadParamsTestCase",
-            "methodName": "test_getparams_1",
-            "description": "获取上传参数-获取成功",
-            "spendTime": "0.43 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_05getFileUploadParamsTestCase",
-            "methodName": "test_getparams_2",
-            "description": "获取上传参数-Params为空",
-            "spendTime": "0.438 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_06getTxCosConfigTestCase",
-            "methodName": "test_getconfig_1",
-            "description": "获取腾讯COS临时参数-获取成功",
-            "spendTime": "0.517 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_06getTxCosConfigTestCase",
-            "methodName": "test_getconfig_2",
-            "description": "获取腾讯COS临时参数-Params为空",
-            "spendTime": "0.521 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_07syncSysConfigTestCase",
-            "methodName": "test_syncSysConfig_1",
-            "description": "获取系统配置-获取成功",
-            "spendTime": "0.473 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_08getConfigTestCase",
-            "methodName": "test_getConfig_1",
-            "description": "获取配置-获取成功",
-            "spendTime": "0.44 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_09getAppTitleTestCase",
-            "methodName": "test_getAppTitle_1",
-            "description": "获取首页功能模块-获取成功",
-            "spendTime": "0.514 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01getDiseaseListTestCase",
-            "methodName": "test_getDiseaseList_1",
-            "description": "获取病症列表-获取成功",
-            "spendTime": "0.452 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02getDrugListTestCase",
-            "methodName": "test_getDiseaseList_1",
-            "description": "搜索药品-获取成功",
-            "spendTime": "0.428 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03syncDoctorListTestCase",
-            "methodName": "test_getDiseaseList_1",
-            "description": "获取医生列表-获取成功",
-            "spendTime": "0.438 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_04saveOrderByAfterTestCase",
-            "methodName": "test_getDiseaseList_1",
-            "description": "提交预约问诊-获取成功",
-            "spendTime": "0.476 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01getMedicationInterTestCase",
-            "methodName": "test_getMedicationInter_1",
-            "description": "获取处方上传输入模板-查询成功",
-            "spendTime": "0.728 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02getConfigTestCase",
-            "methodName": "test_getConfig_1",
-            "description": "获取配置-查询成功",
-            "spendTime": "0.485 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03getDrugListTestCase",
-            "methodName": "test_getDrugList_1",
-            "description": "搜索药品-查询成功",
-            "spendTime": "0.442 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_04ordonUploadTestCase",
-            "methodName": "test_ordonUpload_1",
-            "description": "上传处方-查询成功",
-            "spendTime": "0.533 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_05getOnlineOrderTestCase",
-            "methodName": "test_getOnlineOrder_1",
-            "description": "线上处方列表-查询成功",
-            "spendTime": "0.444 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_06getPrescriptListTestCase",
-            "methodName": "test_getPrescriptList_1",
-            "description": "获取今日外方处方单列表-查询成功",
-            "spendTime": "0.413 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_07getHisPrescriptTestCase",
-            "methodName": "test_getHisPrescript_1",
-            "description": "获取历史处方列表-查询成功",
-            "spendTime": "0.486 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_08getShopLoginInfoTestCase",
-            "methodName": "test_getShopLoginInfo_1",
-            "description": "获取门店子账号信息-查询成功",
-            "spendTime": "0.48 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_09getAllShopTestCase",
-            "methodName": "test_getAllShop_1",
-            "description": "获取门店子账号信息-查询成功",
-            "spendTime": "0.492 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_10shopApplyTestCase",
-            "methodName": "test_shopApply_1",
-            "description": "申请调店-已经存在调店申请",
-            "spendTime": "0.493 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_11saveShopLoginSignUrlTestCase",
-            "methodName": "test_saveShopLoginSignUrl_1",
-            "description": "保存门店子账号签名图片-查询成功",
-            "spendTime": "0.474 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_12saveOrderSignUrlTestCase",
-            "methodName": "test_saveOrderSignUrl_1",
-            "description": "线上处方单调配、复合发药片-获取成功",
-            "spendTime": "0.423 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_13saveOfflineSignUrlTestCase",
-            "methodName": "test_saveOfflineSignUrl_1",
-            "description": "今日外方调配、复合发药片-获取成功",
-            "spendTime": "0.524 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01searchMemberTestCase",
-            "methodName": "test_searchMember_1",
-            "description": "会员查询-查询成功",
-            "spendTime": "0.516 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02syncUserOrderCodeTestCase",
-            "methodName": "test_syncUserOrderCode_1",
-            "description": "获取预约号-获取成功",
-            "spendTime": "0.415 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03getUserVisitTemplatesTestCase",
-            "methodName": "test_getUserVisitTemplates_1",
-            "description": "获取问诊输入模板-查询成功",
-            "spendTime": "0.853 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_04saveMemberTempTestCase",
-            "methodName": "test_saveMemberTemp_1",
-            "description": "保存问诊输入模板数据-保存成功",
-            "spendTime": "0.7 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_05syncEfficacyListInfoTestCase",
-            "methodName": "test_syncEfficacyListInfo_1",
-            "description": "获取科室信息-查询成功",
-            "spendTime": "0.426 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_06syncDoctorListTestCase",
-            "methodName": "test_syncDoctorList_1",
-            "description": "获取医生列表-查询成功",
-            "spendTime": "0.512 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_07addAppointmentListTestCase",
-            "methodName": "test_addAppointmentList_1",
-            "description": "发送预约请求-查询成功",
-            "spendTime": "0.536 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_01LoginTestCase",
-            "methodName": "test_Login_1",
-            "description": "管理员登录-登陆成功",
-            "spendTime": "0.0957 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_02getDataListTestCase",
-            "methodName": "test_getDataList_1",
-            "description": "获取处方单列表-获取成功",
-            "spendTime": "0.165 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_03getChatVedioTestCase",
-            "methodName": "test_getChatVedio_1",
-            "description": "查看视频记录-获取成功",
-            "spendTime": "0.21 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_04getOrderTempleDataTestCase",
-            "methodName": "test_getOrderTempleData_1",
-            "description": "获取处方数据-获取成功",
-            "spendTime": "0.142 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_05getOrderTempleDataTestCase",
-            "methodName": "test_getOrderTempleData_1",
-            "description": "获取处方数据-获取成功",
-            "spendTime": "0.14 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_06getOrderListTestCase",
-            "methodName": "test_getOrderList_1",
-            "description": "获取待确认问诊列表-获取成功",
-            "spendTime": "0.134 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_07saveOfflineOrderTestCase",
-            "methodName": "test_saveOfflineOrder_1",
-            "description": "提交处方-提交成功",
-            "spendTime": "0.129 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_08getDataList1TestCase",
-            "methodName": "test_getDataList1_1",
-            "description": "外来问诊处方列表-获取成功",
-            "spendTime": "0.145 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_09getOfflineOrderInfoTestCase",
-            "methodName": "test_getOfflineOrderInfo_1",
-            "description": "获取处方详情-获取成功",
-            "spendTime": "0.14 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        },
-        {
-            "className": "test_10getDataList2TestCase",
-            "methodName": "test_getDataList2_1",
-            "description": "获取挂单列表-获取成功",
-            "spendTime": "2.92 s",
-            "status": "成功",
-            "log": [
-                ""
-            ]
-        }
-    ],
-    "testName": "掌上医馆1.0自动化项目",
-    "testAll": 96,
-    "testFail": 0,
-    "beginTime": "2020-05-12 16:40:21",
-    "totalTime": "35s",
-    "testSkip": 0,
-    "testError": 0
-};
+    var resultData = ${resultData};
     function details(obj) {
         if ($(obj).text() == '展开') {
             var len = $(obj).parent().parent().children().length;
@@ -8252,7 +7279,7 @@ body.skin-3 {
                     subtext: '',
                     x: 'center',
                     textStyle: {
-                        "color": "#555"
+                        "color": "${color-info}"
                     }
                 },
                 tooltip: {
@@ -8277,9 +7304,9 @@ body.skin-3 {
                             {value: resultData["testPass"], name: '成功'}
                         ],
                         color: [
-                                    "#F25929",
-                                    "#777777",
-                                    "#70AD47"
+                                    "${color-fail}",
+                                    "${color-skip}",
+                                    "${color-pass}"
                                 ],
                         itemStyle: {
                             emphasis: {
