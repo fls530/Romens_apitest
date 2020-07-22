@@ -25,7 +25,7 @@ class test_01OrgguidTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -57,7 +57,7 @@ class test_02PhoneTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -89,7 +89,7 @@ class test_03PwdTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             result = ''
             if 'result' in res:
@@ -125,7 +125,7 @@ class test_04GetversionTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -156,7 +156,7 @@ class test_05getFileUploadParamsTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -187,7 +187,7 @@ class test_06getTxCosConfigTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -218,7 +218,7 @@ class test_07syncSysConfigTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -249,7 +249,7 @@ class test_08getConfigTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -280,7 +280,7 @@ class test_09getAppTitleTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:

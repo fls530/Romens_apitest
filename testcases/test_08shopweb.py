@@ -22,7 +22,7 @@ class test_01LoginTestCase(unittest.TestCase):
         # 准备用例数据
         method, headers, url, data, row, expected = getdata(case)
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -56,7 +56,7 @@ class test_02getDataListTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -93,7 +93,7 @@ class test_03getChatVedioTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -130,7 +130,7 @@ class test_04getOrderTempleDataTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -167,7 +167,7 @@ class test_05getOrderTempleDataTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -204,7 +204,7 @@ class test_06getOrderListTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -241,7 +241,7 @@ class test_07saveOfflineOrderTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -278,7 +278,7 @@ class test_08getDataList1TestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -315,7 +315,7 @@ class test_09getOfflineOrderInfoTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -352,7 +352,7 @@ class test_10getDataList2TestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])

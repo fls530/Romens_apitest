@@ -28,7 +28,7 @@ class test_01searchMemberTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -58,7 +58,7 @@ class test_02syncUserOrderCodeTestCase(unittest.TestCase):
         method = "post"
         headers = eval(conf.get("env", "headers"))
         data = {"QueryType": "searchMember", "Params": '{"SEARCH":"123456"}', "UserGuid": login()}
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         # 提取会员编号作为类属性
         EnvData.memberid = jsonpath.jsonpath(res, "$..会员编号")[0]
 
@@ -67,7 +67,7 @@ class test_02syncUserOrderCodeTestCase(unittest.TestCase):
         method, headers, url, data, row, expected = getdata(case)
         data["UserGuid"] = login()
         res = (
-            request(url=url, method=method, data=data, headers=headers)).json()
+            request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -97,7 +97,7 @@ class test_03getUserVisitTemplatesTestCase(unittest.TestCase):
         method = "post"
         headers = eval(conf.get("env", "headers"))
         data = {"QueryType": "searchMember", "Params": '{"SEARCH":"123456"}', "UserGuid": login()}
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.memberid = jsonpath.jsonpath(res, "$..会员编号")[0]
 
@@ -107,7 +107,7 @@ class test_03getUserVisitTemplatesTestCase(unittest.TestCase):
         headers1 = eval(conf.get("env", "headers"))
         data1 = {"QueryType": "syncUserOrderCode",
                  "Params": '{"ERPCODE":"","MEMBERID":"' + EnvData.memberid + '","STATE":0}', "UserGuid": login()}
-        res1 = (request(url=url1, method=method1, data=data1, headers=headers1)).json()
+        res1 = (request(url=url1, method=method1, data=data1, headers=headers1, verify=False)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.code = jsonpath.jsonpath(res1, "$..CODE")[0]
 
@@ -120,7 +120,7 @@ class test_03getUserVisitTemplatesTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -147,7 +147,7 @@ class test_04saveMemberTempTestCase(unittest.TestCase):
         method, headers, url, data, row, expected = getdata(case)
         data["UserGuid"] = login()
         res = (
-            request(url=url, method=method, data=data, headers=headers)).json()
+            request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -175,7 +175,7 @@ class test_05syncEfficacyListInfoTestCase(unittest.TestCase):
         method, headers, url, data, row, expected = getdata(case)
         data["UserGuid"] = login()
         res = (
-            request(url=url, method=method, data=data, headers=headers)).json()
+            request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -205,7 +205,7 @@ class test_06syncDoctorListTestCase(unittest.TestCase):
         method = "post"
         headers = eval(conf.get("env", "headers"))
         data = {"QueryType": "searchMember", "Params": '{"SEARCH":"123456"}', "UserGuid": login()}
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.memberid = jsonpath.jsonpath(res, "$..会员编号")[0]
 
@@ -215,7 +215,7 @@ class test_06syncDoctorListTestCase(unittest.TestCase):
         headers1 = eval(conf.get("env", "headers"))
         data1 = {"QueryType": "syncUserOrderCode",
                  "Params": '{"ERPCODE":"","MEMBERID":"' + EnvData.memberid + '","STATE":0}', "UserGuid": login()}
-        res1 = (request(url=url1, method=method1, data=data1, headers=headers1)).json()
+        res1 = (request(url=url1, method=method1, data=data1, headers=headers1, verify=False)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.code = jsonpath.jsonpath(res1, "$..CODE")[0]
 
@@ -234,7 +234,7 @@ class test_06syncDoctorListTestCase(unittest.TestCase):
         method, headers, url, data, row, expected = getdata(case)
         data["UserGuid"] = login()
         res = (
-            request(url=url, method=method, data=data, headers=headers)).json()
+            request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -264,7 +264,7 @@ class test_07addAppointmentListTestCase(unittest.TestCase):
         method = "post"
         headers = eval(conf.get("env", "headers"))
         data = {"QueryType": "searchMember", "Params": '{"SEARCH":"123456"}', "UserGuid": login()}
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.memberid = jsonpath.jsonpath(res, "$..会员编号")[0]
         EnvData.MEMBERNAME = jsonpath.jsonpath(res, "$..会员名称")[0]
@@ -276,7 +276,7 @@ class test_07addAppointmentListTestCase(unittest.TestCase):
         headers1 = eval(conf.get("env", "headers"))
         data1 = {"QueryType": "syncUserOrderCode",
                  "Params": '{"ERPCODE":"","MEMBERID":"' + EnvData.memberid + '","STATE":0}', "UserGuid": login()}
-        res1 = (request(url=url1, method=method1, data=data1, headers=headers1)).json()
+        res1 = (request(url=url1, method=method1, data=data1, headers=headers1, verify=False)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.code = jsonpath.jsonpath(res1, "$..CODE")[0]
 
@@ -286,7 +286,7 @@ class test_07addAppointmentListTestCase(unittest.TestCase):
         method2 = "post"
         headers2 = eval(conf.get("env", "headers"))
         data2 = {"QueryType": "syncEfficacyListInfo", "Params": '{"LASTTIME":0}', "UserGuid": login()}
-        res2 = (request(url=url2, method=method2, data=data2, headers=headers2)).json()
+        res2 = (request(url=url2, method=method2, data=data2, headers=headers2, verify=False)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.GUID = jsonpath.jsonpath(res2, "$..GUID")[0]
 
@@ -300,7 +300,7 @@ class test_07addAppointmentListTestCase(unittest.TestCase):
                                                                    '"ORDER_CODE":"' + EnvData.code + '",'
                                                                                                      '"EFFID":"' + EnvData.GUID + '"',
                  "UserGuid": login()}
-        res3 = (request(url=url3, method=method3, data=data3, headers=headers3)).json()
+        res3 = (request(url=url3, method=method3, data=data3, headers=headers3, verify=False)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.DOCTORID = jsonpath.jsonpath(res3, "$..GUID")[0]
         EnvData.DOCTORPHONE = jsonpath.jsonpath(res3, "$..PHONE")[0]
@@ -310,7 +310,7 @@ class test_07addAppointmentListTestCase(unittest.TestCase):
     def test_addAppointmentList(self, case):
         method, headers, url, data, row, expected = getdata(case)
         data["UserGuid"] = login()
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:

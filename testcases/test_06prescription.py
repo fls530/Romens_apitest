@@ -29,7 +29,7 @@ class test_01getMedicationInterTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -63,7 +63,7 @@ class test_02getConfigTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -97,7 +97,7 @@ class test_03getDrugListTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -131,7 +131,7 @@ class test_04ordonUploadTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -165,7 +165,7 @@ class test_05getOnlineOrderTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -199,7 +199,7 @@ class test_06getPrescriptListTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -234,7 +234,7 @@ class test_07getHisPrescriptTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -268,7 +268,7 @@ class test_08getShopLoginInfoTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -302,7 +302,7 @@ class test_09getAllShopTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -336,7 +336,7 @@ class test_10shopApplyTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -370,7 +370,7 @@ class test_11saveShopLoginSignUrlTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -400,7 +400,7 @@ class test_12saveOrderSignUrlTestCase(unittest.TestCase):
         method = "post"
         headers = eval(conf.get("env", "headers"))
         data = {"QueryType": "getOnlineOrder", "Params": '{"page":0}', "UserGuid": login()}
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         # 提取会员编号作为类属性
         # EnvData.guid = jsonpath.jsonpath(res, "$..ID")[0]
 
@@ -415,7 +415,7 @@ class test_12saveOrderSignUrlTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -445,7 +445,7 @@ class test_13saveOfflineSignUrlTestCase(unittest.TestCase):
         method = "post"
         headers = eval(conf.get("env", "headers"))
         data = {"QueryType": "getPrescriptList", "Params": '{"orderCode":"","page":1,"status":""}', "UserGuid": login()}
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         # 提取会员编号作为类属性
         EnvData.guid = jsonpath.jsonpath(res, "$..ORDERCODE")[0]
 
@@ -460,7 +460,7 @@ class test_13saveOfflineSignUrlTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:

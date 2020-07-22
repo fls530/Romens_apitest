@@ -22,7 +22,7 @@ class test_01LoginTestCase(unittest.TestCase):
         # 准备用例数据
         method, headers, url, data, row, expected = getdata(case)
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -56,7 +56,7 @@ class test_02checkPharCompareFaceTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -93,7 +93,7 @@ class test_03savePharImgTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -129,7 +129,7 @@ class test_04getWorkStateTestCase(unittest.TestCase):
             "password": conf.get("test_data", "phar_pwd")}
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
-        response2 = se.post(url=url1)
+        response2 = se.post(url=url1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -166,7 +166,7 @@ class test_05setPharWorkStateTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -203,7 +203,7 @@ class test_06getDataListTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -240,7 +240,7 @@ class test_07checkPwdTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -277,7 +277,7 @@ class test_08gethistoryDataListTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -314,7 +314,7 @@ class test_09getnoapprovedListTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -351,7 +351,7 @@ class test_10getapprovedListTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -388,7 +388,7 @@ class test_11getOfflineOrderInfoTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -425,7 +425,7 @@ class test_12getMedicationInterTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -462,7 +462,7 @@ class test_13getMedicationHistoryTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -499,7 +499,7 @@ class test_14getChatVideoTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -536,7 +536,7 @@ class test_14syncAppointmentInfoTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])
@@ -573,7 +573,7 @@ class test_15CloseAppointmentTestCase(unittest.TestCase):
         response = se.post(url=login_url, data=login_data)
         url1 = conf.get("env", "url") + case["url"]
         data1 = eval(case["data"])
-        response2 = se.post(url=url1, data=data1)
+        response2 = se.post(url=url1, data=data1, verify=False)
         res = response2.json()
         row = case["case_id"] + 1
         expected = eval(case["expected"])

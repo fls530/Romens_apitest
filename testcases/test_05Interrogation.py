@@ -23,7 +23,7 @@ class test_01getDiseaseListTestCase(unittest.TestCase):
         method, headers, url, data, row, expected = getdata(case)
         data["UserGuid"] = login()
         res = (
-            request(url=url, method=method, data=data, headers=headers)).json()
+            request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -51,7 +51,7 @@ class test_02getDrugListTestCase(unittest.TestCase):
         method, headers, url, data, row, expected = getdata(case)
         data["UserGuid"] = login()
         res = (
-            request(url=url, method=method, data=data, headers=headers)).json()
+            request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -78,7 +78,7 @@ class test_03syncDoctorListTestCase(unittest.TestCase):
     def test_getDiseaseList(self, case):
         method, headers, url, data, row, expected = getdata(case)
         data["UserGuid"] = login()
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -110,7 +110,7 @@ class test_04saveOrderByAfterTestCase(unittest.TestCase):
         data1 = {"QueryType": "getDrugList",
                  "Params": '{"page":1,"keyword":"' + conf.get("test_data", "drugs") + '","barcode":""}',
                  "UserGuid": login()}
-        res1 = (request(url=url1, method=method1, data=data1, headers=headers1)).json()
+        res1 = (request(url=url1, method=method1, data=data1, headers=headers1, verify=False)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.drugs_id = jsonpath.jsonpath(res1, "$..GUID")[0]
         EnvData.goodsname = jsonpath.jsonpath(res1, "$..GOODSNAME")[0]
@@ -133,7 +133,7 @@ class test_04saveOrderByAfterTestCase(unittest.TestCase):
         # 请求提交预约问诊接口
         method, headers, url, data, row, expected = getdata(case)
         data["UserGuid"] = login()
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:

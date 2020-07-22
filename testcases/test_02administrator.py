@@ -28,7 +28,7 @@ class test_01loginTestCase(unittest.TestCase):
                 url=url,
                 method=method,
                 data=data,
-                headers=headers)).json()
+                headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:

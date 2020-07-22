@@ -21,7 +21,7 @@ class test_01UserLoginByPwdTestCase(unittest.TestCase):
         # 准备用例数据
         method, headers, url, data, row, expected = getdata(case)
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -49,7 +49,7 @@ class test_02getDoctorInfoTestCase(unittest.TestCase):
         # 准备用例数据
         method, headers, url, data, row, expected = getdata(case)
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -77,7 +77,7 @@ class test_03syncAppointmentListTestCase(unittest.TestCase):
         # 准备用例数据
         method, headers, url, data, row, expected = getdata(case)
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -105,7 +105,7 @@ class test_04changeDoctorWorkStateTestCase(unittest.TestCase):
         # 准备用例数据
         method, headers, url, data, row, expected = getdata(case)
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -133,7 +133,7 @@ class test_05createChatRoomTestCase(unittest.TestCase):
         # 准备用例数据
         method, headers, url, data, row, expected = getdata(case)
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -161,7 +161,7 @@ class test_06syncAppointmentInfoTestCase(unittest.TestCase):
         # 准备用例数据
         method, headers, url, data, row, expected = getdata(case)
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
@@ -189,7 +189,7 @@ class test_07getDrugInfoByNameTestCase(unittest.TestCase):
         # 准备用例数据
         method, headers, url, data, row, expected = getdata(case)
         # 调用接口,获取实际结果
-        res = (request(url=url, method=method, data=data, headers=headers)).json()
+        res = (request(url=url, method=method, data=data, headers=headers, verify=False)).json()
         try:
             self.assertEqual(expected, res["result"])
         except AssertionError as e:
