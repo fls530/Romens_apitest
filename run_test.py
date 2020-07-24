@@ -1,28 +1,35 @@
 import unittest
-from common.BE import BE
+from common.ding_talk import ReportData
 from common.handle_logging import log
 from common.handle_path import CASE_DIR, REPORT_DIR
 from common.ding_talk import DingTalkSend
 from common.handle_config import conf
+from unittestreport import TestRunner
 import time
 
 log.info("---------------开始执行测试用例-----------------------")
 
-# 创建测试套件
-suite = unittest.TestSuite()
-
-# 加载用例到套件
-loader = unittest.TestLoader()
-suite.addTest(loader.discover(CASE_DIR))
-
-# 执行用例生成报告
-bf = BE(suite)
+# 第一步：加载测试套件
+suite = unittest.defaultTestLoader.discover(CASE_DIR)
 
 ticks = time.strftime("%Y%m%d%H%M%S", time.localtime())
 filename = str(ticks) + ".html"
 
-bf.report("掌上医馆1.0自动化项目", filename=filename, report_dir=REPORT_DIR)
+# 第二步：创建运行对象，传入测试套件
+runner = ReportData(suite, filename, REPORT_DIR, "掌上医馆1.0自动化项目", "范珑生", "掌上医馆自动化测试报告", 1)
+
+# 第三步：执行测试
+runner.run()
+# 第四步: 获取测试数据
+data = runner.get_results()
+success = data["success"]
+allcase = data["all"]
+fail = data["fail"]
+skip = data["skip"]
+error = data["error"]
+
+
 url = conf.get("env", "base_url") + "Romens_apitest/reports/" + filename
-DingTalkSend(url)
+DingTalkSend(success, allcase, fail, skip, error, url)
 
 log.info("---------------测试用例执行完毕,正在发送报告前往钉钉,请注意查收-----------------------")

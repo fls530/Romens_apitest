@@ -5,6 +5,9 @@ import jsonpath
 from common.handle_config import conf
 from requests import request
 import datetime
+import warnings
+
+warnings.filterwarnings("ignore")
 
 
 class EnvData:
