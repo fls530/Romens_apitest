@@ -1,11 +1,10 @@
+import time
 import unittest
-from common.ding_talk import ReportData
 from common.handle_logging import log
 from common.handle_path import CASE_DIR, REPORT_DIR
-from common.ding_talk import DingTalkSend
+from common.ding_talk import DingTalkSend, ReportData
 from common.handle_config import conf
-from unittestreport import TestRunner
-import time
+
 
 log.info("---------------开始执行测试用例-----------------------")
 
