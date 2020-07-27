@@ -9,7 +9,6 @@ from common.handle_logging import log
 from common.handle_path import DATA_DIR
 from common.handle_data import getdata, login, EnvData
 
-
 filename = os.path.join(DATA_DIR, "remote.xlsx")
 
 
@@ -225,7 +224,7 @@ class test_06syncDoctorListTestCase(unittest.TestCase):
         method2 = "post"
         headers2 = eval(conf.get("env", "headers"))
         data2 = {"QueryType": "syncEfficacyListInfo", "Params": '{"LASTTIME":0}', "UserGuid": login()}
-        res2 = (request(url=url2, method=method2, data=data2, headers=headers2)).json()
+        res2 = (request(url=url2, method=method2, data=data2, headers=headers2, verify=False)).json()
         # 提取药品编号和药品名称作为类属性
         EnvData.guid = jsonpath.jsonpath(res2, "$..GUID")[0]
 

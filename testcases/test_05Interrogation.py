@@ -120,7 +120,7 @@ class test_04saveOrderByAfterTestCase(unittest.TestCase):
         method2 = "post"
         headers2 = eval(conf.get("env", "headers"))
         data2 = {"QueryType": "syncDoctorList", "Params": '{"keyword":""}', "UserGuid": login()}
-        res2 = (request(url=url2, method=method2, data=data2, headers=headers2)).json()
+        res2 = (request(url=url2, method=method2, data=data2, headers=headers2, verify=False)).json()
         # 提取医生接口返回值 医生编号,医生手机号
         try:
             EnvData.doctorId = jsonpath.jsonpath(res2, "$..GUID")[0]
