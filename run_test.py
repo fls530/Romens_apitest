@@ -29,6 +29,6 @@ error = data["error"]
 
 
 url = conf.get("env", "base_url") + "Romens_apitest/reports/" + filename
-# DingTalkSend(success, allcase, fail, skip, error, url)
+DingTalkSend(success, allcase, fail, skip, error, url)
 
 log.info("---------------测试用例执行完毕,正在发送报告前往企业微信,请注意查收-----------------------")

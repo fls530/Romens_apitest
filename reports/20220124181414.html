@@ -1,0 +1,3546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试报告</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--    页面样式-->
+    <style type="text/css">
+        /*标题样式*/
+        .title {
+            width: auto;
+            height: 60px;
+            text-align: center;
+            font: bolder 38px/60px "Microsoft YaHei UI";
+        }
+
+        /*汇总信息样式*/
+        .summary {
+            width: 90%;
+            position: absolute;
+            top: 120px;
+            margin-left: 5%;
+
+        }
+
+        .text-left {
+            font: bolder 20px/30px "Microsoft YaHei UI";
+        }
+
+        .left {
+            width: 50%;
+            float: left;
+
+        }
+
+        .right {
+            width: 50%;
+            float: right;
+
+        }
+
+        .desc {
+            float: left;
+            width: 100%;
+        }
+
+        .list-group-item span {
+            font: normal 16px/38px "Microsoft YaHei UI";
+            padding: 30px;
+
+        }
+
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: .4rem 1.25rem;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, .125);
+        }
+
+        /* 执行信息样式   */
+        .test_info {
+            width: 90%;
+            position: absolute;
+            top: 900px;
+            margin-left: 5%;
+
+            color: #28a745 !important;
+        }
+
+        .table td, th {
+            border: solid 2px rgba(9, 122, 51, 0.11) !important;
+            padding: 0;
+            line-height: 40px;
+            text-align: center;
+
+        }
+
+
+        select {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            height: 2em;
+            width: 8em;
+            margin-left: 2em;
+        }
+
+        option {
+            text-align: center;
+            height: 36px;
+            font: none 18px/36px "Microsoft YaHei UI";
+            color: #28a745 !important;
+        }
+
+        .test_log {
+            background: rgba(163, 171, 189, 0.15);
+            width: 100%;
+            height: 50px;
+            border-top: none;
+            border-bottom: none;
+            display: none;
+            text-align: left;
+        }
+
+        .test_log td {
+            text-align: left;
+            height: 30px;
+            margin: 0;
+            padding-left: 3em;
+            padding-right:3em;
+            font: none 18px/24px "Microsoft YaHei UI";
+            color: #9e141a;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /*    测试图表显示*/
+        .char {
+            width: 90%;
+            position: absolute;
+            top: 450px;
+            margin-left: 5%;
+            color: #28a745 !important;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--报告标题-->
+<div class="title text-success">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">青岛诉求系统1.0自动化项目</div>
+</div>
+
+<!--汇总信息-->
+<div class="summary">
+    <p class="text-left text-success">测试结果汇总</p>
+    <div class="left">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">测试人员</button>
+                <span class="text-dark">范珑生</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">开始时间</button>
+                <span class="text-dark">2022-01-24 18:14:14</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">执行时间</button>
+                <span class="text-dark">155.50 S</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">用例总数</button>
+                <span class="text-dark">96</span>
+            </li>
+
+
+        </ul>
+    </div>
+    <div class="right">
+        <ul class="list-group">
+
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">成功用例</button>
+                <span class="text-success">86</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-danger">失败用例</button>
+                <span class="text-warning">4</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-warning">错误用例</button>
+                <span class="text-danger">6</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-secondary">跳过用例</button>
+                <span class="text-secondary">0</span>
+            </li>
+        </ul>
+    </div>
+    <div class="desc">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">描述信息</button>
+                <span class="text-secondary">青岛诉求系统自动化测试报告</span>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+<!--测试图表-->
+<div class="char">
+    <p class="text-left text-success">图表展示</p>
+    <div id="char2" style="width: 49%;height: 400px;float: left"></div>
+    <div id="char" style="width: 49%;height: 400px ;float: left"></div>
+</div>
+
+<!--详细信息-->
+<div class="test_info">
+
+    <p class="text-left text-success">详细信息</p>
+    <div class="table_data">
+
+        <table class="table">
+            <thead class="bg-success text-light">
+            <tr>
+                <th scope="col" style="width: 5%;padding: 0">编号</th>
+                <th scope="col" style="width: 20%;padding: 0">
+                    <span>测试类</span>
+                    <select id="testClass">
+                        <option>所有</option>
+                        
+                            <option>test_01UserLoginByPwdTestCase</option>
+                        
+                            <option>test_02getDoctorInfoTestCase</option>
+                        
+                            <option>test_03syncAppointmentListTestCase</option>
+                        
+                            <option>test_04changeDoctorWorkStateTestCase</option>
+                        
+                            <option>test_05createChatRoomTestCase</option>
+                        
+                            <option>test_06syncAppointmentInfoTestCase</option>
+                        
+                            <option>test_07getDrugInfoByNameTestCase</option>
+                        
+                            <option>test_08getPasteListTestCase</option>
+                        
+                            <option>test_01loginTestCase</option>
+                        
+                            <option>test_02getDataListTestCase</option>
+                        
+                            <option>test_03importDataTestCase</option>
+                        
+                            <option>test_04getDataListByChildTestCase</option>
+                        
+                            <option>test_05getDoctorInfoTestCase</option>
+                        
+                            <option>test_06getlistTestCase</option>
+                        
+                            <option>test_07getDataTestCase</option>
+                        
+                            <option>test_08getShopOrderTestCase</option>
+                        
+                            <option>test_09getDoctorOrderTestCase</option>
+                        
+                            <option>test_10getPharmacistOrderTestCase</option>
+                        
+                            <option>test_11getAppointmentTestCase</option>
+                        
+                            <option>test_12getGoodsListTestCase</option>
+                        
+                            <option>test_01LoginTestCase</option>
+                        
+                            <option>test_02checkPharCompareFaceTestCase</option>
+                        
+                            <option>test_03savePharImgTestCase</option>
+                        
+                            <option>test_04getWorkStateTestCase</option>
+                        
+                            <option>test_05setPharWorkStateTestCase</option>
+                        
+                            <option>test_06getDataListTestCase</option>
+                        
+                            <option>test_07checkPwdTestCase</option>
+                        
+                            <option>test_08gethistoryDataListTestCase</option>
+                        
+                            <option>test_09getnoapprovedListTestCase</option>
+                        
+                            <option>test_10getapprovedListTestCase</option>
+                        
+                            <option>test_11getOfflineOrderInfoTestCase</option>
+                        
+                            <option>test_12getMedicationInterTestCase</option>
+                        
+                            <option>test_13getMedicationHistoryTestCase</option>
+                        
+                            <option>test_14getChatVideoTestCase</option>
+                        
+                            <option>test_14syncAppointmentInfoTestCase</option>
+                        
+                            <option>test_15CloseAppointmentTestCase</option>
+                        
+                            <option>test_01OrgguidTestCase</option>
+                        
+                            <option>test_02PhoneTestCase</option>
+                        
+                            <option>test_03PwdTestCase</option>
+                        
+                            <option>test_04GetversionTestCase</option>
+                        
+                            <option>test_05getFileUploadParamsTestCase</option>
+                        
+                            <option>test_06getTxCosConfigTestCase</option>
+                        
+                            <option>test_07syncSysConfigTestCase</option>
+                        
+                            <option>test_08getConfigTestCase</option>
+                        
+                            <option>test_09getAppTitleTestCase</option>
+                        
+                            <option>test_01getDiseaseListTestCase</option>
+                        
+                            <option>test_02getDrugListTestCase</option>
+                        
+                            <option>test_03syncDoctorListTestCase</option>
+                        
+                            <option>test_04saveOrderByAfterTestCase</option>
+                        
+                            <option>test_01getMedicationInterTestCase</option>
+                        
+                            <option>test_02getConfigTestCase</option>
+                        
+                            <option>test_03getDrugListTestCase</option>
+                        
+                            <option>test_04ordonUploadTestCase</option>
+                        
+                            <option>test_05getOnlineOrderTestCase</option>
+                        
+                            <option>test_06getPrescriptListTestCase</option>
+                        
+                            <option>test_07getHisPrescriptTestCase</option>
+                        
+                            <option>test_08getShopLoginInfoTestCase</option>
+                        
+                            <option>test_09getAllShopTestCase</option>
+                        
+                            <option>test_10shopApplyTestCase</option>
+                        
+                            <option>test_11saveShopLoginSignUrlTestCase</option>
+                        
+                            <option>test_12saveOrderSignUrlTestCase</option>
+                        
+                            <option>test_13saveOfflineSignUrlTestCase</option>
+                        
+                            <option>test_01searchMemberTestCase</option>
+                        
+                            <option>test_02syncUserOrderCodeTestCase</option>
+                        
+                            <option>test_03getUserVisitTemplatesTestCase</option>
+                        
+                            <option>test_04saveMemberTempTestCase</option>
+                        
+                            <option>test_05syncEfficacyListInfoTestCase</option>
+                        
+                            <option>test_06syncDoctorListTestCase</option>
+                        
+                            <option>test_07addAppointmentListTestCase</option>
+                        
+                            <option>test_01LoginTestCase</option>
+                        
+                            <option>test_02getDataListTestCase</option>
+                        
+                            <option>test_03getChatVedioTestCase</option>
+                        
+                            <option>test_04getOrderTempleDataTestCase</option>
+                        
+                            <option>test_05getOrderTempleDataTestCase</option>
+                        
+                            <option>test_06getOrderListTestCase</option>
+                        
+                            <option>test_07saveOfflineOrderTestCase</option>
+                        
+                            <option>test_08getDataList1TestCase</option>
+                        
+                            <option>test_09getOfflineOrderInfoTestCase</option>
+                        
+                            <option>test_10getDataList2TestCase</option>
+                        
+                    </select>
+
+                </th>
+
+                <th scope="col" style="width: 15%;padding: 0">测试方法</th>
+                <th scope="col" style="width: 20%;padding: 0">用例描述</th>
+                <th scope="col" style="width: 10%;padding: 0">执行时间</th>
+                <th scope="col" style="width: 20%;padding: 0">
+
+                    <span>执行结果</span>
+                    <select id="testResult">
+                        <option>所有</option>
+                        <option class="text-success">成功</option>
+                        <option class="text-danger">失败</option>
+                        <option class="text-warning">错误</option>
+                        <option class="text-info">跳过</option>
+                    </select>
+
+                </th>
+                <th scope="col" style="width: 10%;padding: 0">详细信息</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+                <tr>
+                    <td>1</td>
+                    <td class="test_01UserLoginByPwdTestCase">test_01UserLoginByPwdTestCase</td>
+                    <td>test_UserLoginByPwd_1</td>
+                    <td>医生登录-验证成功</td>
+                    <td>0.942s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_UserLoginByPwd_1 (test_01doctor.test_01UserLoginByPwdTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td class="test_02getDoctorInfoTestCase">test_02getDoctorInfoTestCase</td>
+                    <td>test_getDoctorInfo_1</td>
+                    <td>获取医生的问诊信息-获取成功</td>
+                    <td>1.2s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDoctorInfo_1 (test_01doctor.test_02getDoctorInfoTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td class="test_03syncAppointmentListTestCase">test_03syncAppointmentListTestCase</td>
+                    <td>test_syncAppointmentList_1</td>
+                    <td>获取待接诊人员列表-获取成功</td>
+                    <td>1.41s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_syncAppointmentList_1 (test_01doctor.test_03syncAppointmentListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td class="test_04changeDoctorWorkStateTestCase">test_04changeDoctorWorkStateTestCase</td>
+                    <td>test_changeDoctorWorkState_1</td>
+                    <td>更新医生工作状态-修改成功</td>
+                    <td>1.06s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_changeDoctorWorkState_1 (test_01doctor.test_04changeDoctorWorkStateTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td class="test_05createChatRoomTestCase">test_05createChatRoomTestCase</td>
+                    <td>test_createChatRoom_1</td>
+                    <td>创建房间-修改成功</td>
+                    <td>1.22s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_createChatRoom_1 (test_01doctor.test_05createChatRoomTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td class="test_06syncAppointmentInfoTestCase">test_06syncAppointmentInfoTestCase</td>
+                    <td>test_syncAppointmentInfo_1</td>
+                    <td>修改问诊的预约状态-修改成功</td>
+                    <td>0.245s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_syncAppointmentInfo_1 (test_01doctor.test_06syncAppointmentInfoTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>7</td>
+                    <td class="test_07getDrugInfoByNameTestCase">test_07getDrugInfoByNameTestCase</td>
+                    <td>test_getDrugInfoByName_1</td>
+                    <td>搜索西药处方药品-获取成功</td>
+                    <td>0.327s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDrugInfoByName_1 (test_01doctor.test_07getDrugInfoByNameTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>8</td>
+                    <td class="test_08getPasteListTestCase">test_08getPasteListTestCase</td>
+                    <td>test_getPasteList_1</td>
+                    <td>搜索膏方处方药-获取成功</td>
+                    <td>0.212s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getPasteList_1 (test_01doctor.test_08getPasteListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>9</td>
+                    <td class="test_01loginTestCase">test_01loginTestCase</td>
+                    <td>test_login_1</td>
+                    <td>管理员登录-登陆成功</td>
+                    <td>0.506s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_login_1 (test_02administrator.test_01loginTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>10</td>
+                    <td class="test_02getDataListTestCase">test_02getDataListTestCase</td>
+                    <td>test_getDataList_1</td>
+                    <td>获取门店列表-登陆成功</td>
+                    <td>0.291s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDataList_1 (test_02administrator.test_02getDataListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>11</td>
+                    <td class="test_03importDataTestCase">test_03importDataTestCase</td>
+                    <td>test_importData_1</td>
+                    <td>导入门店-导入成功</td>
+                    <td>0.0638s</td>
+                    
+                        <td class="text-warning">错误</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\library\myddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_02administrator.py", line 102, in test_importData
+    file = {'file': open(r"C:\Users\Administrator\Desktop\Romens_Api_Test\data\891407.xls", 'rb')}
+</pre>
+                        
+
+                            <pre>FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Administrator\\Desktop\\Romens_Api_Test\\data\\891407.xls'
+</pre>
+                        
+
+                            <pre>test_importData_1 (test_02administrator.test_03importDataTestCase)执行——>【错误Error】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>12</td>
+                    <td class="test_04getDataListByChildTestCase">test_04getDataListByChildTestCase</td>
+                    <td>test_getDataListByChild_1</td>
+                    <td>子账号获取-获取成功</td>
+                    <td>0.258s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDataListByChild_1 (test_02administrator.test_04getDataListByChildTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>13</td>
+                    <td class="test_05getDoctorInfoTestCase">test_05getDoctorInfoTestCase</td>
+                    <td>test_getDoctorInfo_1</td>
+                    <td>获取医师列表-获取成功</td>
+                    <td>0.282s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDoctorInfo_1 (test_02administrator.test_05getDoctorInfoTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>14</td>
+                    <td class="test_06getlistTestCase">test_06getlistTestCase</td>
+                    <td>test_getlist_1</td>
+                    <td>获取药师列表-获取成功</td>
+                    <td>0.261s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getlist_1 (test_02administrator.test_06getlistTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>15</td>
+                    <td class="test_07getDataTestCase">test_07getDataTestCase</td>
+                    <td>test_getData_1</td>
+                    <td>获取处方单列表-获取成功</td>
+                    <td>0.289s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getData_1 (test_02administrator.test_07getDataTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>16</td>
+                    <td class="test_08getShopOrderTestCase">test_08getShopOrderTestCase</td>
+                    <td>test_getShopOrder_1</td>
+                    <td>获取门店开方量列表-获取成功</td>
+                    <td>0.276s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getShopOrder_1 (test_02administrator.test_08getShopOrderTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>17</td>
+                    <td class="test_09getDoctorOrderTestCase">test_09getDoctorOrderTestCase</td>
+                    <td>test_getDoctorOrder_1</td>
+                    <td>获取医生开方量列表-获取成功</td>
+                    <td>0.26s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDoctorOrder_1 (test_02administrator.test_09getDoctorOrderTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>18</td>
+                    <td class="test_10getPharmacistOrderTestCase">test_10getPharmacistOrderTestCase</td>
+                    <td>test_getPharmacistOrder_1</td>
+                    <td>获取药师开方量列表-获取成功</td>
+                    <td>0.262s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getPharmacistOrder_1 (test_02administrator.test_10getPharmacistOrderTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>19</td>
+                    <td class="test_11getAppointmentTestCase">test_11getAppointmentTestCase</td>
+                    <td>test_getAppointment_1</td>
+                    <td>获取预约列表数据-获取成功</td>
+                    <td>0.272s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getAppointment_1 (test_02administrator.test_11getAppointmentTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>20</td>
+                    <td class="test_12getGoodsListTestCase">test_12getGoodsListTestCase</td>
+                    <td>test_getGoodsList_1</td>
+                    <td>获取商品列表数据-获取成功</td>
+                    <td>0.283s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getGoodsList_1 (test_02administrator.test_12getGoodsListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>21</td>
+                    <td class="test_01LoginTestCase">test_01LoginTestCase</td>
+                    <td>test_Login_1</td>
+                    <td>药师登录-验证成功</td>
+                    <td>0.214s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_Login_1 (test_03pharmacist.test_01LoginTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>22</td>
+                    <td class="test_02checkPharCompareFaceTestCase">test_02checkPharCompareFaceTestCase</td>
+                    <td>test_checkPharCompareFace_1</td>
+                    <td>人脸验证-获取成功</td>
+                    <td>0.273s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_checkPharCompareFace_1 (test_03pharmacist.test_02checkPharCompareFaceTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>23</td>
+                    <td class="test_03savePharImgTestCase">test_03savePharImgTestCase</td>
+                    <td>test_savePharImg_1</td>
+                    <td>保存药师人脸信息-获取成功</td>
+                    <td>0.253s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_savePharImg_1 (test_03pharmacist.test_03savePharImgTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>24</td>
+                    <td class="test_04getWorkStateTestCase">test_04getWorkStateTestCase</td>
+                    <td>test_getWorkState_1</td>
+                    <td>获取药师工作状态-修改成功</td>
+                    <td>0.274s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getWorkState_1 (test_03pharmacist.test_04getWorkStateTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>25</td>
+                    <td class="test_05setPharWorkStateTestCase">test_05setPharWorkStateTestCase</td>
+                    <td>test_setPharWorkState_1</td>
+                    <td>设置药师工作状态请求-设置成功</td>
+                    <td>0.295s</td>
+                    
+                        <td class="text-warning">错误</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\library\myddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 170, in test_setPharWorkState
+    res = response2.json()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\models.py", line 898, in json
+    return complexjson.loads(self.text, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+</pre>
+                        
+
+                            <pre>json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+</pre>
+                        
+
+                            <pre>test_setPharWorkState_1 (test_03pharmacist.test_05setPharWorkStateTestCase)执行——>【错误Error】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>26</td>
+                    <td class="test_06getDataListTestCase">test_06getDataListTestCase</td>
+                    <td>test_getDataList_1</td>
+                    <td>获取药师审方列表-获取成功</td>
+                    <td>0.281s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDataList_1 (test_03pharmacist.test_06getDataListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>27</td>
+                    <td class="test_07checkPwdTestCase">test_07checkPwdTestCase</td>
+                    <td>test_checkPwd_1</td>
+                    <td>验证药师审核密码-验证成功</td>
+                    <td>0.268s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_checkPwd_1 (test_03pharmacist.test_07checkPwdTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>28</td>
+                    <td class="test_08gethistoryDataListTestCase">test_08gethistoryDataListTestCase</td>
+                    <td>test_gethistoryDataList_1</td>
+                    <td>获取历史处方-获取成功</td>
+                    <td>0.277s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_gethistoryDataList_1 (test_03pharmacist.test_08gethistoryDataListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>29</td>
+                    <td class="test_09getnoapprovedListTestCase">test_09getnoapprovedListTestCase</td>
+                    <td>test_getnoapprovedList_1</td>
+                    <td>获取药师待审核处方列表-获取成功</td>
+                    <td>0.211s</td>
+                    
+                        <td class="text-warning">错误</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\library\myddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 318, in test_getnoapprovedList
+    res = response2.json()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\models.py", line 898, in json
+    return complexjson.loads(self.text, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+</pre>
+                        
+
+                            <pre>json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+</pre>
+                        
+
+                            <pre>test_getnoapprovedList_1 (test_03pharmacist.test_09getnoapprovedListTestCase)执行——>【错误Error】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>30</td>
+                    <td class="test_10getapprovedListTestCase">test_10getapprovedListTestCase</td>
+                    <td>test_getapprovedList_1</td>
+                    <td>获取药师已审核处方列表-获取成功</td>
+                    <td>0.219s</td>
+                    
+                        <td class="text-warning">错误</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\library\myddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 355, in test_getapprovedList
+    res = response2.json()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\models.py", line 898, in json
+    return complexjson.loads(self.text, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+</pre>
+                        
+
+                            <pre>json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+</pre>
+                        
+
+                            <pre>test_getapprovedList_1 (test_03pharmacist.test_10getapprovedListTestCase)执行——>【错误Error】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>31</td>
+                    <td class="test_11getOfflineOrderInfoTestCase">test_11getOfflineOrderInfoTestCase</td>
+                    <td>test_getOfflineOrderInfo_1</td>
+                    <td>获取处方详情-获取成功</td>
+                    <td>0.288s</td>
+                    
+                        <td class="text-danger">失败</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getOfflineOrderInfo_1 (test_03pharmacist.test_11getOfflineOrderInfoTestCase)执行——>【失败】
+</pre>
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\library\myddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 404, in test_getOfflineOrderInfo
+    raise e
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 396, in test_getOfflineOrderInfo
+    self.assertEqual(expected["CODE"], res['CODE'])
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+</pre>
+                        
+
+                            <pre>AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>32</td>
+                    <td class="test_12getMedicationInterTestCase">test_12getMedicationInterTestCase</td>
+                    <td>test_getMedicationInter_1</td>
+                    <td>获取用药咨询列表（实时列表）-获取成功</td>
+                    <td>0.342s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getMedicationInter_1 (test_03pharmacist.test_12getMedicationInterTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>33</td>
+                    <td class="test_13getMedicationHistoryTestCase">test_13getMedicationHistoryTestCase</td>
+                    <td>test_getMedicationHistory_1</td>
+                    <td>获取处方详情-获取成功</td>
+                    <td>0.288s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getMedicationHistory_1 (test_03pharmacist.test_13getMedicationHistoryTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>34</td>
+                    <td class="test_14getChatVideoTestCase">test_14getChatVideoTestCase</td>
+                    <td>test_getChatVideo_1</td>
+                    <td>获取用药咨询视频-获取成功</td>
+                    <td>0.295s</td>
+                    
+                        <td class="text-danger">失败</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getChatVideo_1 (test_03pharmacist.test_14getChatVideoTestCase)执行——>【失败】
+</pre>
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\library\myddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 515, in test_getChatVideo
+    raise e
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 507, in test_getChatVideo
+    self.assertEqual(expected["CODE"], res['CODE'])
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+</pre>
+                        
+
+                            <pre>AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>35</td>
+                    <td class="test_14syncAppointmentInfoTestCase">test_14syncAppointmentInfoTestCase</td>
+                    <td>test_syncAppointmentInfo_1</td>
+                    <td>接听用药咨询视频-获取成功</td>
+                    <td>0.359s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_syncAppointmentInfo_1 (test_03pharmacist.test_14syncAppointmentInfoTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>36</td>
+                    <td class="test_15CloseAppointmentTestCase">test_15CloseAppointmentTestCase</td>
+                    <td>test_CloseAppointment_1</td>
+                    <td>挂断用药咨询视频-挂断成功</td>
+                    <td>0.591s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_CloseAppointment_1 (test_03pharmacist.test_15CloseAppointmentTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>37</td>
+                    <td class="test_01OrgguidTestCase">test_01OrgguidTestCase</td>
+                    <td>test_orgguid_1</td>
+                    <td>App验证企业号-验证成功</td>
+                    <td>0.184s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_orgguid_1 (test_04system.test_01OrgguidTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>38</td>
+                    <td class="test_01OrgguidTestCase">test_01OrgguidTestCase</td>
+                    <td>test_orgguid_2</td>
+                    <td>App验证企业号-企业号为空</td>
+                    <td>0.188s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_orgguid_2 (test_04system.test_01OrgguidTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>39</td>
+                    <td class="test_01OrgguidTestCase">test_01OrgguidTestCase</td>
+                    <td>test_orgguid_3</td>
+                    <td>App验证企业号-QueryType为空</td>
+                    <td>0.179s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_orgguid_3 (test_04system.test_01OrgguidTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>40</td>
+                    <td class="test_01OrgguidTestCase">test_01OrgguidTestCase</td>
+                    <td>test_orgguid_4</td>
+                    <td>App验证企业号-AppName为空</td>
+                    <td>0.206s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_orgguid_4 (test_04system.test_01OrgguidTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>41</td>
+                    <td class="test_01OrgguidTestCase">test_01OrgguidTestCase</td>
+                    <td>test_orgguid_5</td>
+                    <td>App验证企业号-不传QueryType</td>
+                    <td>0.186s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_orgguid_5 (test_04system.test_01OrgguidTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>42</td>
+                    <td class="test_01OrgguidTestCase">test_01OrgguidTestCase</td>
+                    <td>test_orgguid_6</td>
+                    <td>App验证企业号-不传Params</td>
+                    <td>0.17s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_orgguid_6 (test_04system.test_01OrgguidTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>43</td>
+                    <td class="test_02PhoneTestCase">test_02PhoneTestCase</td>
+                    <td>test_phone_1</td>
+                    <td>App验证手机号-验证成功</td>
+                    <td>0.199s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_phone_1 (test_04system.test_02PhoneTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>44</td>
+                    <td class="test_02PhoneTestCase">test_02PhoneTestCase</td>
+                    <td>test_phone_2</td>
+                    <td>App验证手机号-QueryType为空</td>
+                    <td>0.19s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_phone_2 (test_04system.test_02PhoneTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>45</td>
+                    <td class="test_02PhoneTestCase">test_02PhoneTestCase</td>
+                    <td>test_phone_3</td>
+                    <td>App验证手机号-AppName为空</td>
+                    <td>0.187s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_phone_3 (test_04system.test_02PhoneTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>46</td>
+                    <td class="test_02PhoneTestCase">test_02PhoneTestCase</td>
+                    <td>test_phone_4</td>
+                    <td>App验证手机号-不传QueryType</td>
+                    <td>0.175s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_phone_4 (test_04system.test_02PhoneTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>47</td>
+                    <td class="test_02PhoneTestCase">test_02PhoneTestCase</td>
+                    <td>test_phone_5</td>
+                    <td>App验证手机号-不传Params</td>
+                    <td>0.179s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_phone_5 (test_04system.test_02PhoneTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>48</td>
+                    <td class="test_03PwdTestCase">test_03PwdTestCase</td>
+                    <td>test_pwd_1</td>
+                    <td>App验证密码-验证成功</td>
+                    <td>0.183s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_pwd_1 (test_04system.test_03PwdTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>49</td>
+                    <td class="test_03PwdTestCase">test_03PwdTestCase</td>
+                    <td>test_pwd_2</td>
+                    <td>App验证密码-密码为空</td>
+                    <td>0.173s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_pwd_2 (test_04system.test_03PwdTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>50</td>
+                    <td class="test_03PwdTestCase">test_03PwdTestCase</td>
+                    <td>test_pwd_3</td>
+                    <td>App验证密码-企业号为空</td>
+                    <td>0.196s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_pwd_3 (test_04system.test_03PwdTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>51</td>
+                    <td class="test_03PwdTestCase">test_03PwdTestCase</td>
+                    <td>test_pwd_4</td>
+                    <td>App验证密码-手机号为空</td>
+                    <td>0.191s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_pwd_4 (test_04system.test_03PwdTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>52</td>
+                    <td class="test_03PwdTestCase">test_03PwdTestCase</td>
+                    <td>test_pwd_5</td>
+                    <td>App验证密码-设备号为空</td>
+                    <td>0.185s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_pwd_5 (test_04system.test_03PwdTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>53</td>
+                    <td class="test_04GetversionTestCase">test_04GetversionTestCase</td>
+                    <td>test_getversion_1</td>
+                    <td>获取app版本信息-获取成功</td>
+                    <td>0.442s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getversion_1 (test_04system.test_04GetversionTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>54</td>
+                    <td class="test_04GetversionTestCase">test_04GetversionTestCase</td>
+                    <td>test_getversion_2</td>
+                    <td>获取app版本信息-clienType为空</td>
+                    <td>0.473s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getversion_2 (test_04system.test_04GetversionTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>55</td>
+                    <td class="test_04GetversionTestCase">test_04GetversionTestCase</td>
+                    <td>test_getversion_3</td>
+                    <td>获取app版本信息-build为空</td>
+                    <td>0.46s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getversion_3 (test_04system.test_04GetversionTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>56</td>
+                    <td class="test_05getFileUploadParamsTestCase">test_05getFileUploadParamsTestCase</td>
+                    <td>test_getparams_1</td>
+                    <td>获取上传参数-获取成功</td>
+                    <td>0.543s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getparams_1 (test_04system.test_05getFileUploadParamsTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>57</td>
+                    <td class="test_05getFileUploadParamsTestCase">test_05getFileUploadParamsTestCase</td>
+                    <td>test_getparams_2</td>
+                    <td>获取上传参数-Params为空</td>
+                    <td>0.507s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getparams_2 (test_04system.test_05getFileUploadParamsTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>58</td>
+                    <td class="test_06getTxCosConfigTestCase">test_06getTxCosConfigTestCase</td>
+                    <td>test_getconfig_1</td>
+                    <td>获取腾讯COS临时参数-获取成功</td>
+                    <td>0.503s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getconfig_1 (test_04system.test_06getTxCosConfigTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>59</td>
+                    <td class="test_06getTxCosConfigTestCase">test_06getTxCosConfigTestCase</td>
+                    <td>test_getconfig_2</td>
+                    <td>获取腾讯COS临时参数-Params为空</td>
+                    <td>0.511s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getconfig_2 (test_04system.test_06getTxCosConfigTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>60</td>
+                    <td class="test_07syncSysConfigTestCase">test_07syncSysConfigTestCase</td>
+                    <td>test_syncSysConfig_1</td>
+                    <td>获取系统配置-获取成功</td>
+                    <td>0.432s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_syncSysConfig_1 (test_04system.test_07syncSysConfigTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>61</td>
+                    <td class="test_08getConfigTestCase">test_08getConfigTestCase</td>
+                    <td>test_getConfig_1</td>
+                    <td>获取配置-获取成功</td>
+                    <td>0.454s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getConfig_1 (test_04system.test_08getConfigTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>62</td>
+                    <td class="test_09getAppTitleTestCase">test_09getAppTitleTestCase</td>
+                    <td>test_getAppTitle_1</td>
+                    <td>获取首页功能模块-获取成功</td>
+                    <td>0.447s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getAppTitle_1 (test_04system.test_09getAppTitleTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>63</td>
+                    <td class="test_01getDiseaseListTestCase">test_01getDiseaseListTestCase</td>
+                    <td>test_getDiseaseList_1</td>
+                    <td>获取病症列表-获取成功</td>
+                    <td>0.473s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDiseaseList_1 (test_05Interrogation.test_01getDiseaseListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>64</td>
+                    <td class="test_02getDrugListTestCase">test_02getDrugListTestCase</td>
+                    <td>test_getDiseaseList_1</td>
+                    <td>搜索药品-获取成功</td>
+                    <td>0.358s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDiseaseList_1 (test_05Interrogation.test_02getDrugListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>65</td>
+                    <td class="test_03syncDoctorListTestCase">test_03syncDoctorListTestCase</td>
+                    <td>test_getDiseaseList_1</td>
+                    <td>获取医生列表-获取成功</td>
+                    <td>0.342s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDiseaseList_1 (test_05Interrogation.test_03syncDoctorListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>66</td>
+                    <td class="test_04saveOrderByAfterTestCase">test_04saveOrderByAfterTestCase</td>
+                    <td>setUpClass </td>
+                    <td>None</td>
+                    <td>0</td>
+                    
+                        <td class="text-warning">错误</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\suite.py", line 163, in _handleClassSetUp
+    setUpClass()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_05Interrogation.py", line 115, in setUpClass
+    EnvData.drugs_id = jsonpath.jsonpath(res1, "$..GUID")[0]
+</pre>
+                        
+
+                            <pre>TypeError: 'bool' object is not subscriptable
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>67</td>
+                    <td class="test_01getMedicationInterTestCase">test_01getMedicationInterTestCase</td>
+                    <td>test_getMedicationInter_1</td>
+                    <td>获取处方上传输入模板-查询成功</td>
+                    <td>0.455s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getMedicationInter_1 (test_06prescription.test_01getMedicationInterTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>68</td>
+                    <td class="test_02getConfigTestCase">test_02getConfigTestCase</td>
+                    <td>test_getConfig_1</td>
+                    <td>获取配置-查询成功</td>
+                    <td>0.436s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getConfig_1 (test_06prescription.test_02getConfigTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>69</td>
+                    <td class="test_03getDrugListTestCase">test_03getDrugListTestCase</td>
+                    <td>test_getDrugList_1</td>
+                    <td>搜索药品-查询成功</td>
+                    <td>0.561s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDrugList_1 (test_06prescription.test_03getDrugListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>70</td>
+                    <td class="test_04ordonUploadTestCase">test_04ordonUploadTestCase</td>
+                    <td>test_ordonUpload_1</td>
+                    <td>上传处方-查询成功</td>
+                    <td>0.754s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_ordonUpload_1 (test_06prescription.test_04ordonUploadTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>71</td>
+                    <td class="test_05getOnlineOrderTestCase">test_05getOnlineOrderTestCase</td>
+                    <td>test_getOnlineOrder_1</td>
+                    <td>线上处方列表-查询成功</td>
+                    <td>0.42s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getOnlineOrder_1 (test_06prescription.test_05getOnlineOrderTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>72</td>
+                    <td class="test_06getPrescriptListTestCase">test_06getPrescriptListTestCase</td>
+                    <td>test_getPrescriptList_1</td>
+                    <td>获取今日外方处方单列表-查询成功</td>
+                    <td>0.522s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getPrescriptList_1 (test_06prescription.test_06getPrescriptListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>73</td>
+                    <td class="test_07getHisPrescriptTestCase">test_07getHisPrescriptTestCase</td>
+                    <td>test_getHisPrescript_1</td>
+                    <td>获取历史处方列表-查询成功</td>
+                    <td>0.647s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getHisPrescript_1 (test_06prescription.test_07getHisPrescriptTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>74</td>
+                    <td class="test_08getShopLoginInfoTestCase">test_08getShopLoginInfoTestCase</td>
+                    <td>test_getShopLoginInfo_1</td>
+                    <td>获取门店子账号信息-查询成功</td>
+                    <td>0.377s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getShopLoginInfo_1 (test_06prescription.test_08getShopLoginInfoTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>75</td>
+                    <td class="test_09getAllShopTestCase">test_09getAllShopTestCase</td>
+                    <td>test_getAllShop_1</td>
+                    <td>获取门店子账号信息-查询成功</td>
+                    <td>0.394s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getAllShop_1 (test_06prescription.test_09getAllShopTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>76</td>
+                    <td class="test_10shopApplyTestCase">test_10shopApplyTestCase</td>
+                    <td>test_shopApply_1</td>
+                    <td>申请调店-已经存在调店申请</td>
+                    <td>0.422s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_shopApply_1 (test_06prescription.test_10shopApplyTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>77</td>
+                    <td class="test_11saveShopLoginSignUrlTestCase">test_11saveShopLoginSignUrlTestCase</td>
+                    <td>test_saveShopLoginSignUrl_1</td>
+                    <td>保存门店子账号签名图片-查询成功</td>
+                    <td>0.41s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_saveShopLoginSignUrl_1 (test_06prescription.test_11saveShopLoginSignUrlTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>78</td>
+                    <td class="test_12saveOrderSignUrlTestCase">test_12saveOrderSignUrlTestCase</td>
+                    <td>test_saveOrderSignUrl_1</td>
+                    <td>线上处方单调配、复合发药片-获取成功</td>
+                    <td>0.335s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_saveOrderSignUrl_1 (test_06prescription.test_12saveOrderSignUrlTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>79</td>
+                    <td class="test_13saveOfflineSignUrlTestCase">test_13saveOfflineSignUrlTestCase</td>
+                    <td>test_saveOfflineSignUrl_1</td>
+                    <td>今日外方调配、复合发药片-获取成功</td>
+                    <td>0.51s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_saveOfflineSignUrl_1 (test_06prescription.test_13saveOfflineSignUrlTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>80</td>
+                    <td class="test_01searchMemberTestCase">test_01searchMemberTestCase</td>
+                    <td>test_searchMember_1</td>
+                    <td>会员查询-查询成功</td>
+                    <td>0.425s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_searchMember_1 (test_07remoteconsultation.test_01searchMemberTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>81</td>
+                    <td class="test_02syncUserOrderCodeTestCase">test_02syncUserOrderCodeTestCase</td>
+                    <td>test_syncUserOrderCode_1</td>
+                    <td>获取预约号-获取成功</td>
+                    <td>0.715s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_syncUserOrderCode_1 (test_07remoteconsultation.test_02syncUserOrderCodeTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>82</td>
+                    <td class="test_03getUserVisitTemplatesTestCase">test_03getUserVisitTemplatesTestCase</td>
+                    <td>test_getUserVisitTemplates_1</td>
+                    <td>获取问诊输入模板-查询成功</td>
+                    <td>0.663s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getUserVisitTemplates_1 (test_07remoteconsultation.test_03getUserVisitTemplatesTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>83</td>
+                    <td class="test_04saveMemberTempTestCase">test_04saveMemberTempTestCase</td>
+                    <td>test_saveMemberTemp_1</td>
+                    <td>保存问诊输入模板数据-保存成功</td>
+                    <td>0.37s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_saveMemberTemp_1 (test_07remoteconsultation.test_04saveMemberTempTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>84</td>
+                    <td class="test_05syncEfficacyListInfoTestCase">test_05syncEfficacyListInfoTestCase</td>
+                    <td>test_syncEfficacyListInfo_1</td>
+                    <td>获取科室信息-查询成功</td>
+                    <td>0.432s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_syncEfficacyListInfo_1 (test_07remoteconsultation.test_05syncEfficacyListInfoTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>85</td>
+                    <td class="test_06syncDoctorListTestCase">test_06syncDoctorListTestCase</td>
+                    <td>test_syncDoctorList_1</td>
+                    <td>获取医生列表-查询成功</td>
+                    <td>0.379s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_syncDoctorList_1 (test_07remoteconsultation.test_06syncDoctorListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>86</td>
+                    <td class="test_07addAppointmentListTestCase">test_07addAppointmentListTestCase</td>
+                    <td>test_addAppointmentList_1</td>
+                    <td>发送预约请求-查询成功</td>
+                    <td>0.459s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_addAppointmentList_1 (test_07remoteconsultation.test_07addAppointmentListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>87</td>
+                    <td class="test_01LoginTestCase">test_01LoginTestCase</td>
+                    <td>test_Login_1</td>
+                    <td>门店登录-登陆成功</td>
+                    <td>0.179s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_Login_1 (test_08shopweb.test_01LoginTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>88</td>
+                    <td class="test_02getDataListTestCase">test_02getDataListTestCase</td>
+                    <td>test_getDataList_1</td>
+                    <td>获取处方单列表-获取成功</td>
+                    <td>0.309s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDataList_1 (test_08shopweb.test_02getDataListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>89</td>
+                    <td class="test_03getChatVedioTestCase">test_03getChatVedioTestCase</td>
+                    <td>test_getChatVedio_1</td>
+                    <td>查看视频记录-获取成功</td>
+                    <td>0.275s</td>
+                    
+                        <td class="text-danger">失败</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getChatVedio_1 (test_08shopweb.test_03getChatVedioTestCase)执行——>【失败】
+</pre>
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\library\myddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_08shopweb.py", line 109, in test_getChatVedio
+    raise e
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_08shopweb.py", line 101, in test_getChatVedio
+    self.assertEqual(expected["CODE"], res["CODE"])
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+</pre>
+                        
+
+                            <pre>AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>90</td>
+                    <td class="test_04getOrderTempleDataTestCase">test_04getOrderTempleDataTestCase</td>
+                    <td>test_getOrderTempleData_1</td>
+                    <td>获取处方数据-获取成功</td>
+                    <td>0.271s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getOrderTempleData_1 (test_08shopweb.test_04getOrderTempleDataTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>91</td>
+                    <td class="test_05getOrderTempleDataTestCase">test_05getOrderTempleDataTestCase</td>
+                    <td>test_getOrderTempleData_1</td>
+                    <td>获取处方数据-获取成功</td>
+                    <td>0.25s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getOrderTempleData_1 (test_08shopweb.test_05getOrderTempleDataTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>92</td>
+                    <td class="test_06getOrderListTestCase">test_06getOrderListTestCase</td>
+                    <td>test_getOrderList_1</td>
+                    <td>获取待确认问诊列表-获取成功</td>
+                    <td>0.249s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getOrderList_1 (test_08shopweb.test_06getOrderListTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>93</td>
+                    <td class="test_07saveOfflineOrderTestCase">test_07saveOfflineOrderTestCase</td>
+                    <td>test_saveOfflineOrder_1</td>
+                    <td>提交处方-提交成功</td>
+                    <td>0.248s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_saveOfflineOrder_1 (test_08shopweb.test_07saveOfflineOrderTestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>94</td>
+                    <td class="test_08getDataList1TestCase">test_08getDataList1TestCase</td>
+                    <td>test_getDataList1_1</td>
+                    <td>外来问诊处方列表-获取成功</td>
+                    <td>0.254s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getDataList1_1 (test_08shopweb.test_08getDataList1TestCase)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>95</td>
+                    <td class="test_09getOfflineOrderInfoTestCase">test_09getOfflineOrderInfoTestCase</td>
+                    <td>test_getOfflineOrderInfo_1</td>
+                    <td>获取处方详情-获取成功</td>
+                    <td>0.242s</td>
+                    
+                        <td class="text-danger">失败</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_getOfflineOrderInfo_1 (test_08shopweb.test_09getOfflineOrderInfoTestCase)执行——>【失败】
+</pre>
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\library\myddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_08shopweb.py", line 331, in test_getOfflineOrderInfo
+    raise e
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_08shopweb.py", line 323, in test_getOfflineOrderInfo
+    self.assertEqual(expected["CODE"], res["CODE"])
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+</pre>
+                        
+
+                            <pre>AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>96</td>
+                    <td class="test_10getDataList2TestCase">test_10getDataList2TestCase</td>
+                    <td>test_getDataList2_1</td>
+                    <td>获取挂单列表-获取成功</td>
+                    <td>30.2s</td>
+                    
+                        <td class="text-warning">错误</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\library\myddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_08shopweb.py", line 360, in test_getDataList2
+    self.assertEqual(expected["Code"], res["Code"])
+</pre>
+                        
+
+                            <pre>TypeError: 'NoneType' object is not subscriptable
+</pre>
+                        
+
+                            <pre>test_getDataList2_1 (test_08shopweb.test_10getDataList2TestCase)执行——>【错误Error】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+
+            </tbody>
+        </table>
+    </div>
+
+    <div style="height: 200px"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+
+<script>
+    var tbodyTr = $('tbody tr');
+    var testResult = $("#testResult");
+    var testClass = $("#testClass");
+    <!--    用例执行详细信息显示切换-->
+    $(".btn_info").click(function () {
+        $(this).parent().parent().next().toggle();
+
+    });
+    // 当选择用例类之后触发
+    testClass.change(function () {
+        var cls = $(this).val();
+        var res = testResult.val();
+        elementDisplay(cls, res);
+        sort()
+    });
+    testResult.change(function () {
+        var res = $(this).val();
+        var cls = testClass.val();
+        elementDisplay(cls, res);
+        sort()
+    });
+
+    function elementDisplay(cls, res) {
+        // 用例数据的显示
+        if (cls === "所有") {
+            if (res === "所有") {
+                tbodyTr.has('button').show();
+            } else if (res === '成功') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-success').show()
+
+            } else if (res === '失败') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-danger').show()
+
+            } else if (res === '错误') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-warning').show()
+
+            } else if (res === '跳过') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-info').show()
+            }
+        } else {
+            if (res === "所有") {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').show()
+            } else if (res === '成功') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-success').show()
+            } else if (res === '失败') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-danger').show()
+            } else if (res === '错误') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-warning').show()
+            } else if (res === '跳过') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-info').show()
+            }
+        }
+    }
+
+    function sort() {
+        //重新排列显示序号
+        // 选择所有可以见的tr
+        var visibleTr = tbodyTr.filter(":visible");
+
+        visibleTr.each(function (index, element) {
+            element.firstElementChild.innerHTML = index + 1;
+
+        })
+
+    }
+
+
+</script>
+
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('char'));
+    var myChart2 = echarts.init(document.getElementById('char2'));
+    // 指定图表的配置项和数据
+    option = {
+        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 10,
+            data: ['通过', '失败', '错误', '跳过']
+        },
+        series: [
+            {
+                name: '测试结果',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    {value: 86, name: '通过'},
+                    {value: 4, name: '失败'},
+                    {value: 6, name: '错误'},
+                    {value: 0, name: '跳过'}
+                ]
+            }
+        ]
+    };
+    option2 = {
+        tooltip: {
+            formatter: '{a} <br/>{b} : {c}%'
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+            {
+                name: '测试结果',
+                type: 'gauge',
+                detail: {formatter: '89.58%'},
+                data: [{value: '89.58', name: '用例通过率'}],
+                axisLine: {
+                    lineStyle: {
+                        color: [
+                            [0.2, '#c20000'],
+                            [0.8, '#ddb518'],
+                            [1, '#00a10a']]
+                    }
+                }
+            }
+        ]
+    };
+
+
+    myChart2.setOption(option2);
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+
+
+</body>
+</html>

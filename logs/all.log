@@ -9591,3 +9591,363 @@ AssertionError: '0000' != '0001'
 
 2021-05-17 16:42:20,061 -- [test_08shopweb.py-->line:371] - INFO: 用例--获取挂单列表-获取成功--执行通过
 2021-05-17 16:42:20,118 -- [run_test.py-->line:34] - INFO: ---------------测试用例执行完毕,正在发送报告前往钉钉,请注意查收-----------------------
+2022-01-24 18:14:12,370 -- [run_test.py-->line:9] - INFO: ---------------开始执行测试用例-----------------------
+2022-01-24 18:14:15,132 -- [test_01doctor.py-->line:37] - INFO: 用例--医生登录-验证成功--执行通过
+2022-01-24 18:14:16,341 -- [test_01doctor.py-->line:65] - INFO: 用例--获取医生的问诊信息-获取成功--执行通过
+2022-01-24 18:14:17,748 -- [test_01doctor.py-->line:93] - INFO: 用例--获取待接诊人员列表-获取成功--执行通过
+2022-01-24 18:14:18,809 -- [test_01doctor.py-->line:121] - INFO: 用例--更新医生工作状态-修改成功--执行通过
+2022-01-24 18:14:20,030 -- [test_01doctor.py-->line:149] - INFO: 用例--创建房间-修改成功--执行通过
+2022-01-24 18:14:20,275 -- [test_01doctor.py-->line:177] - INFO: 用例--修改问诊的预约状态-修改成功--执行通过
+2022-01-24 18:14:20,602 -- [test_01doctor.py-->line:205] - INFO: 用例--搜索西药处方药品-获取成功--执行通过
+2022-01-24 18:14:20,791 -- [test_01doctor.py-->line:239] - INFO: 用例--搜索膏方处方药-获取成功--执行通过
+2022-01-24 18:14:21,298 -- [test_02administrator.py-->line:44] - INFO: 用例--管理员登录-登陆成功--执行通过
+2022-01-24 18:14:21,587 -- [test_02administrator.py-->line:81] - INFO: 用例--获取门店列表-登陆成功--执行通过
+2022-01-24 18:14:21,908 -- [test_02administrator.py-->line:155] - INFO: 用例--子账号获取-获取成功--执行通过
+2022-01-24 18:14:22,191 -- [test_02administrator.py-->line:192] - INFO: 用例--获取医师列表-获取成功--执行通过
+2022-01-24 18:14:22,450 -- [test_02administrator.py-->line:229] - INFO: 用例--获取药师列表-获取成功--执行通过
+2022-01-24 18:14:22,734 -- [test_02administrator.py-->line:266] - INFO: 用例--获取处方单列表-获取成功--执行通过
+2022-01-24 18:14:23,014 -- [test_02administrator.py-->line:303] - INFO: 用例--获取门店开方量列表-获取成功--执行通过
+2022-01-24 18:14:23,279 -- [test_02administrator.py-->line:340] - INFO: 用例--获取医生开方量列表-获取成功--执行通过
+2022-01-24 18:14:23,541 -- [test_02administrator.py-->line:377] - INFO: 用例--获取药师开方量列表-获取成功--执行通过
+2022-01-24 18:14:23,812 -- [test_02administrator.py-->line:413] - INFO: 用例--获取预约列表数据-获取成功--执行通过
+2022-01-24 18:14:24,096 -- [test_02administrator.py-->line:450] - INFO: 用例--获取商品列表数据-获取成功--执行通过
+2022-01-24 18:14:24,302 -- [test_03pharmacist.py-->line:38] - INFO: 用例--药师登录-验证成功--执行通过
+2022-01-24 18:14:24,584 -- [test_03pharmacist.py-->line:75] - INFO: 用例--人脸验证-获取成功--执行通过
+2022-01-24 18:14:24,838 -- [test_03pharmacist.py-->line:112] - INFO: 用例--保存药师人脸信息-获取成功--执行通过
+2022-01-24 18:14:25,109 -- [test_03pharmacist.py-->line:148] - INFO: 用例--获取药师工作状态-修改成功--执行通过
+2022-01-24 18:14:25,690 -- [test_03pharmacist.py-->line:222] - INFO: 用例--获取药师审方列表-获取成功--执行通过
+2022-01-24 18:14:25,958 -- [test_03pharmacist.py-->line:259] - INFO: 用例--验证药师审核密码-验证成功--执行通过
+2022-01-24 18:14:26,231 -- [test_03pharmacist.py-->line:296] - INFO: 用例--获取历史处方-获取成功--执行通过
+2022-01-24 18:14:26,945 -- [test_03pharmacist.py-->line:399] - ERROR: 用例--获取处方详情-获取成功--执行未通过
+2022-01-24 18:14:26,946 -- [test_03pharmacist.py-->line:400] - DEBUG: 预期结果：{'CODE': '0000'}
+2022-01-24 18:14:26,946 -- [test_03pharmacist.py-->line:401] - DEBUG: 实际结果：{'CODE': '0001', 'MSG': '查询失败'}
+2022-01-24 18:14:26,946 -- [test_03pharmacist.py-->line:402] - ERROR: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 396, in test_getOfflineOrderInfo
+    self.assertEqual(expected["CODE"], res['CODE'])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+2022-01-24 18:14:27,297 -- [test_03pharmacist.py-->line:444] - INFO: 用例--获取用药咨询列表（实时列表）-获取成功--执行通过
+2022-01-24 18:14:27,589 -- [test_03pharmacist.py-->line:481] - INFO: 用例--获取处方详情-获取成功--执行通过
+2022-01-24 18:14:27,866 -- [test_03pharmacist.py-->line:510] - ERROR: 用例--获取用药咨询视频-获取成功--执行未通过
+2022-01-24 18:14:27,866 -- [test_03pharmacist.py-->line:511] - DEBUG: 预期结果：{'CODE': '0000'}
+2022-01-24 18:14:27,875 -- [test_03pharmacist.py-->line:512] - DEBUG: 实际结果：{'CODE': '0001', 'MSG': '暂时没有视频，请稍后重试'}
+2022-01-24 18:14:27,875 -- [test_03pharmacist.py-->line:513] - ERROR: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 507, in test_getChatVideo
+    self.assertEqual(expected["CODE"], res['CODE'])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+2022-01-24 18:14:28,235 -- [test_03pharmacist.py-->line:555] - INFO: 用例--接听用药咨询视频-获取成功--执行通过
+2022-01-24 18:14:28,828 -- [test_03pharmacist.py-->line:592] - INFO: 用例--挂断用药咨询视频-挂断成功--执行通过
+2022-01-24 18:14:29,034 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-验证成功--执行通过
+2022-01-24 18:14:29,221 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-企业号为空--执行通过
+2022-01-24 18:14:29,399 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-QueryType为空--执行通过
+2022-01-24 18:14:29,584 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-AppName为空--执行通过
+2022-01-24 18:14:29,796 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-不传QueryType--执行通过
+2022-01-24 18:14:29,964 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-不传Params--执行通过
+2022-01-24 18:14:30,160 -- [test_04system.py-->line:73] - INFO: 用例--App验证手机号-验证成功--执行通过
+2022-01-24 18:14:30,338 -- [test_04system.py-->line:73] - INFO: 用例--App验证手机号-QueryType为空--执行通过
+2022-01-24 18:14:30,538 -- [test_04system.py-->line:73] - INFO: 用例--App验证手机号-AppName为空--执行通过
+2022-01-24 18:14:30,714 -- [test_04system.py-->line:73] - INFO: 用例--App验证手机号-不传QueryType--执行通过
+2022-01-24 18:14:30,892 -- [test_04system.py-->line:73] - INFO: 用例--App验证手机号-不传Params--执行通过
+2022-01-24 18:14:31,074 -- [test_04system.py-->line:110] - INFO: 用例--App验证密码-验证成功--执行通过
+2022-01-24 18:14:31,250 -- [test_04system.py-->line:110] - INFO: 用例--App验证密码-密码为空--执行通过
+2022-01-24 18:14:31,445 -- [test_04system.py-->line:110] - INFO: 用例--App验证密码-企业号为空--执行通过
+2022-01-24 18:14:31,632 -- [test_04system.py-->line:110] - INFO: 用例--App验证密码-手机号为空--执行通过
+2022-01-24 18:14:31,816 -- [test_04system.py-->line:110] - INFO: 用例--App验证密码-设备号为空--执行通过
+2022-01-24 18:14:32,262 -- [test_04system.py-->line:141] - INFO: 用例--获取app版本信息-获取成功--执行通过
+2022-01-24 18:14:32,728 -- [test_04system.py-->line:141] - INFO: 用例--获取app版本信息-clienType为空--执行通过
+2022-01-24 18:14:33,196 -- [test_04system.py-->line:141] - INFO: 用例--获取app版本信息-build为空--执行通过
+2022-01-24 18:14:33,740 -- [test_04system.py-->line:172] - INFO: 用例--获取上传参数-获取成功--执行通过
+2022-01-24 18:14:34,246 -- [test_04system.py-->line:172] - INFO: 用例--获取上传参数-Params为空--执行通过
+2022-01-24 18:14:34,747 -- [test_04system.py-->line:203] - INFO: 用例--获取腾讯COS临时参数-获取成功--执行通过
+2022-01-24 18:14:35,259 -- [test_04system.py-->line:203] - INFO: 用例--获取腾讯COS临时参数-Params为空--执行通过
+2022-01-24 18:14:35,659 -- [test_04system.py-->line:234] - INFO: 用例--获取系统配置-获取成功--执行通过
+2022-01-24 18:14:36,135 -- [test_04system.py-->line:265] - INFO: 用例--获取配置-获取成功--执行通过
+2022-01-24 18:14:36,593 -- [test_04system.py-->line:296] - INFO: 用例--获取首页功能模块-获取成功--执行通过
+2022-01-24 18:14:37,084 -- [test_05Interrogation.py-->line:39] - INFO: 用例--获取病症列表-获取成功--执行通过
+2022-01-24 18:14:37,437 -- [test_05Interrogation.py-->line:67] - INFO: 用例--搜索药品-获取成功--执行通过
+2022-01-24 18:14:37,779 -- [test_05Interrogation.py-->line:94] - INFO: 用例--获取医生列表-获取成功--执行通过
+2022-01-24 18:14:38,545 -- [test_06prescription.py-->line:45] - INFO: 用例--获取处方上传输入模板-查询成功--执行通过
+2022-01-24 18:14:38,978 -- [test_06prescription.py-->line:79] - INFO: 用例--获取配置-查询成功--执行通过
+2022-01-24 18:14:39,544 -- [test_06prescription.py-->line:113] - INFO: 用例--搜索药品-查询成功--执行通过
+2022-01-24 18:14:40,296 -- [test_06prescription.py-->line:147] - INFO: 用例--上传处方-查询成功--执行通过
+2022-01-24 18:14:40,717 -- [test_06prescription.py-->line:181] - INFO: 用例--线上处方列表-查询成功--执行通过
+2022-01-24 18:14:41,238 -- [test_06prescription.py-->line:215] - INFO: 用例--获取今日外方处方单列表-查询成功--执行通过
+2022-01-24 18:14:41,886 -- [test_06prescription.py-->line:250] - INFO: 用例--获取历史处方列表-查询成功--执行通过
+2022-01-24 18:14:42,265 -- [test_06prescription.py-->line:284] - INFO: 用例--获取门店子账号信息-查询成功--执行通过
+2022-01-24 18:14:42,659 -- [test_06prescription.py-->line:318] - INFO: 用例--获取门店子账号信息-查询成功--执行通过
+2022-01-24 18:14:43,078 -- [test_06prescription.py-->line:352] - INFO: 用例--申请调店-已经存在调店申请--执行通过
+2022-01-24 18:14:43,491 -- [test_06prescription.py-->line:386] - INFO: 用例--保存门店子账号签名图片-查询成功--执行通过
+2022-01-24 18:14:44,142 -- [test_06prescription.py-->line:431] - INFO: 用例--线上处方单调配、复合发药片-获取成功--执行通过
+2022-01-24 18:14:45,127 -- [test_06prescription.py-->line:476] - INFO: 用例--今日外方调配、复合发药片-获取成功--执行通过
+2022-01-24 18:14:45,554 -- [test_07remoteconsultation.py-->line:43] - INFO: 用例--会员查询-查询成功--执行通过
+2022-01-24 18:15:07,887 -- [test_07remoteconsultation.py-->line:82] - INFO: 用例--获取预约号-获取成功--执行通过
+2022-01-24 18:15:30,705 -- [test_07remoteconsultation.py-->line:135] - INFO: 用例--获取问诊输入模板-查询成功--执行通过
+2022-01-24 18:15:31,073 -- [test_07remoteconsultation.py-->line:162] - INFO: 用例--保存问诊输入模板数据-保存成功--执行通过
+2022-01-24 18:15:31,484 -- [test_07remoteconsultation.py-->line:190] - INFO: 用例--获取科室信息-查询成功--执行通过
+2022-01-24 18:15:54,014 -- [test_07remoteconsultation.py-->line:249] - INFO: 用例--获取医生列表-查询成功--执行通过
+2022-01-24 18:16:17,193 -- [test_07remoteconsultation.py-->line:325] - INFO: 用例--发送预约请求-查询成功--执行通过
+2022-01-24 18:16:17,370 -- [test_08shopweb.py-->line:38] - INFO: 用例--门店登录-登陆成功--执行通过
+2022-01-24 18:16:17,676 -- [test_08shopweb.py-->line:75] - INFO: 用例--获取处方单列表-获取成功--执行通过
+2022-01-24 18:16:17,951 -- [test_08shopweb.py-->line:104] - ERROR: 用例--查看视频记录-获取成功--执行未通过
+2022-01-24 18:16:17,951 -- [test_08shopweb.py-->line:105] - DEBUG: 预期结果：{'CODE': '0000'}
+2022-01-24 18:16:17,952 -- [test_08shopweb.py-->line:106] - DEBUG: 实际结果：{'CODE': '0001', 'MSG': '暂时没有视频，请稍后重试'}
+2022-01-24 18:16:17,952 -- [test_08shopweb.py-->line:107] - ERROR: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_08shopweb.py", line 101, in test_getChatVedio
+    self.assertEqual(expected["CODE"], res["CODE"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+2022-01-24 18:16:18,214 -- [test_08shopweb.py-->line:149] - INFO: 用例--获取处方数据-获取成功--执行通过
+2022-01-24 18:16:18,475 -- [test_08shopweb.py-->line:186] - INFO: 用例--获取处方数据-获取成功--执行通过
+2022-01-24 18:16:18,722 -- [test_08shopweb.py-->line:223] - INFO: 用例--获取待确认问诊列表-获取成功--执行通过
+2022-01-24 18:16:18,971 -- [test_08shopweb.py-->line:260] - INFO: 用例--提交处方-提交成功--执行通过
+2022-01-24 18:16:19,227 -- [test_08shopweb.py-->line:297] - INFO: 用例--外来问诊处方列表-获取成功--执行通过
+2022-01-24 18:16:19,469 -- [test_08shopweb.py-->line:326] - ERROR: 用例--获取处方详情-获取成功--执行未通过
+2022-01-24 18:16:19,469 -- [test_08shopweb.py-->line:327] - DEBUG: 预期结果：{'CODE': '0000'}
+2022-01-24 18:16:19,469 -- [test_08shopweb.py-->line:328] - DEBUG: 实际结果：{'CODE': '0001', 'MSG': '查询失败'}
+2022-01-24 18:16:19,469 -- [test_08shopweb.py-->line:329] - ERROR: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_08shopweb.py", line 323, in test_getOfflineOrderInfo
+    self.assertEqual(expected["CODE"], res["CODE"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+2022-01-24 18:16:49,754 -- [run_test.py-->line:34] - INFO: ---------------测试用例执行完毕,正在发送报告前往企业微信,请注意查收-----------------------
+2022-01-24 18:31:37,300 -- [run_test.py-->line:9] - INFO: ---------------开始执行测试用例-----------------------
+2022-01-24 18:31:39,467 -- [test_01doctor.py-->line:37] - INFO: 用例--医生登录-验证成功--执行通过
+2022-01-24 18:31:39,680 -- [test_01doctor.py-->line:65] - INFO: 用例--获取医生的问诊信息-获取成功--执行通过
+2022-01-24 18:31:39,867 -- [test_01doctor.py-->line:93] - INFO: 用例--获取待接诊人员列表-获取成功--执行通过
+2022-01-24 18:31:40,094 -- [test_01doctor.py-->line:121] - INFO: 用例--更新医生工作状态-修改成功--执行通过
+2022-01-24 18:31:40,401 -- [test_01doctor.py-->line:149] - INFO: 用例--创建房间-修改成功--执行通过
+2022-01-24 18:31:40,586 -- [test_01doctor.py-->line:177] - INFO: 用例--修改问诊的预约状态-修改成功--执行通过
+2022-01-24 18:31:40,786 -- [test_01doctor.py-->line:205] - INFO: 用例--搜索西药处方药品-获取成功--执行通过
+2022-01-24 18:31:40,978 -- [test_01doctor.py-->line:239] - INFO: 用例--搜索膏方处方药-获取成功--执行通过
+2022-01-24 18:31:41,170 -- [test_02administrator.py-->line:44] - INFO: 用例--管理员登录-登陆成功--执行通过
+2022-01-24 18:31:41,425 -- [test_02administrator.py-->line:81] - INFO: 用例--获取门店列表-登陆成功--执行通过
+2022-01-24 18:31:41,760 -- [test_02administrator.py-->line:155] - INFO: 用例--子账号获取-获取成功--执行通过
+2022-01-24 18:31:42,101 -- [test_02administrator.py-->line:192] - INFO: 用例--获取医师列表-获取成功--执行通过
+2022-01-24 18:31:42,374 -- [test_02administrator.py-->line:229] - INFO: 用例--获取药师列表-获取成功--执行通过
+2022-01-24 18:31:42,652 -- [test_02administrator.py-->line:266] - INFO: 用例--获取处方单列表-获取成功--执行通过
+2022-01-24 18:31:42,917 -- [test_02administrator.py-->line:303] - INFO: 用例--获取门店开方量列表-获取成功--执行通过
+2022-01-24 18:31:43,187 -- [test_02administrator.py-->line:340] - INFO: 用例--获取医生开方量列表-获取成功--执行通过
+2022-01-24 18:31:43,454 -- [test_02administrator.py-->line:377] - INFO: 用例--获取药师开方量列表-获取成功--执行通过
+2022-01-24 18:31:43,700 -- [test_02administrator.py-->line:413] - INFO: 用例--获取预约列表数据-获取成功--执行通过
+2022-01-24 18:31:43,979 -- [test_02administrator.py-->line:450] - INFO: 用例--获取商品列表数据-获取成功--执行通过
+2022-01-24 18:31:44,181 -- [test_03pharmacist.py-->line:38] - INFO: 用例--药师登录-验证成功--执行通过
+2022-01-24 18:31:44,456 -- [test_03pharmacist.py-->line:75] - INFO: 用例--人脸验证-获取成功--执行通过
+2022-01-24 18:31:44,720 -- [test_03pharmacist.py-->line:112] - INFO: 用例--保存药师人脸信息-获取成功--执行通过
+2022-01-24 18:31:44,998 -- [test_03pharmacist.py-->line:148] - INFO: 用例--获取药师工作状态-修改成功--执行通过
+2022-01-24 18:31:45,577 -- [test_03pharmacist.py-->line:222] - INFO: 用例--获取药师审方列表-获取成功--执行通过
+2022-01-24 18:31:45,834 -- [test_03pharmacist.py-->line:259] - INFO: 用例--验证药师审核密码-验证成功--执行通过
+2022-01-24 18:31:46,092 -- [test_03pharmacist.py-->line:296] - INFO: 用例--获取历史处方-获取成功--执行通过
+2022-01-24 18:31:47,974 -- [test_03pharmacist.py-->line:399] - ERROR: 用例--获取处方详情-获取成功--执行未通过
+2022-01-24 18:31:47,975 -- [test_03pharmacist.py-->line:400] - DEBUG: 预期结果：{'CODE': '0000'}
+2022-01-24 18:31:47,975 -- [test_03pharmacist.py-->line:401] - DEBUG: 实际结果：{'CODE': '0001', 'MSG': '查询失败'}
+2022-01-24 18:31:47,975 -- [test_03pharmacist.py-->line:402] - ERROR: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 396, in test_getOfflineOrderInfo
+    self.assertEqual(expected["CODE"], res['CODE'])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+2022-01-24 18:31:49,113 -- [test_03pharmacist.py-->line:444] - INFO: 用例--获取用药咨询列表（实时列表）-获取成功--执行通过
+2022-01-24 18:31:49,508 -- [test_03pharmacist.py-->line:481] - INFO: 用例--获取处方详情-获取成功--执行通过
+2022-01-24 18:31:50,024 -- [test_03pharmacist.py-->line:510] - ERROR: 用例--获取用药咨询视频-获取成功--执行未通过
+2022-01-24 18:31:50,024 -- [test_03pharmacist.py-->line:511] - DEBUG: 预期结果：{'CODE': '0000'}
+2022-01-24 18:31:50,024 -- [test_03pharmacist.py-->line:512] - DEBUG: 实际结果：{'CODE': '0001', 'MSG': '暂时没有视频，请稍后重试'}
+2022-01-24 18:31:50,025 -- [test_03pharmacist.py-->line:513] - ERROR: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_03pharmacist.py", line 507, in test_getChatVideo
+    self.assertEqual(expected["CODE"], res['CODE'])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+2022-01-24 18:31:50,396 -- [test_03pharmacist.py-->line:555] - INFO: 用例--接听用药咨询视频-获取成功--执行通过
+2022-01-24 18:31:50,879 -- [test_03pharmacist.py-->line:592] - INFO: 用例--挂断用药咨询视频-挂断成功--执行通过
+2022-01-24 18:31:51,085 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-验证成功--执行通过
+2022-01-24 18:31:51,273 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-企业号为空--执行通过
+2022-01-24 18:31:51,456 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-QueryType为空--执行通过
+2022-01-24 18:31:51,643 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-AppName为空--执行通过
+2022-01-24 18:31:51,841 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-不传QueryType--执行通过
+2022-01-24 18:31:52,025 -- [test_04system.py-->line:41] - INFO: 用例--App验证企业号-不传Params--执行通过
+2022-01-24 18:31:52,208 -- [test_04system.py-->line:73] - INFO: 用例--App验证手机号-验证成功--执行通过
+2022-01-24 18:31:52,391 -- [test_04system.py-->line:73] - INFO: 用例--App验证手机号-QueryType为空--执行通过
+2022-01-24 18:31:52,566 -- [test_04system.py-->line:73] - INFO: 用例--App验证手机号-AppName为空--执行通过
+2022-01-24 18:31:52,741 -- [test_04system.py-->line:73] - INFO: 用例--App验证手机号-不传QueryType--执行通过
+2022-01-24 18:31:52,924 -- [test_04system.py-->line:73] - INFO: 用例--App验证手机号-不传Params--执行通过
+2022-01-24 18:31:53,113 -- [test_04system.py-->line:110] - INFO: 用例--App验证密码-验证成功--执行通过
+2022-01-24 18:31:53,310 -- [test_04system.py-->line:110] - INFO: 用例--App验证密码-密码为空--执行通过
+2022-01-24 18:31:53,497 -- [test_04system.py-->line:110] - INFO: 用例--App验证密码-企业号为空--执行通过
+2022-01-24 18:31:53,672 -- [test_04system.py-->line:110] - INFO: 用例--App验证密码-手机号为空--执行通过
+2022-01-24 18:31:53,855 -- [test_04system.py-->line:110] - INFO: 用例--App验证密码-设备号为空--执行通过
+2022-01-24 18:31:54,304 -- [test_04system.py-->line:141] - INFO: 用例--获取app版本信息-获取成功--执行通过
+2022-01-24 18:31:54,757 -- [test_04system.py-->line:141] - INFO: 用例--获取app版本信息-clienType为空--执行通过
+2022-01-24 18:31:55,166 -- [test_04system.py-->line:141] - INFO: 用例--获取app版本信息-build为空--执行通过
+2022-01-24 18:31:55,553 -- [test_04system.py-->line:172] - INFO: 用例--获取上传参数-获取成功--执行通过
+2022-01-24 18:31:56,011 -- [test_04system.py-->line:172] - INFO: 用例--获取上传参数-Params为空--执行通过
+2022-01-24 18:31:56,552 -- [test_04system.py-->line:203] - INFO: 用例--获取腾讯COS临时参数-获取成功--执行通过
+2022-01-24 18:31:57,071 -- [test_04system.py-->line:203] - INFO: 用例--获取腾讯COS临时参数-Params为空--执行通过
+2022-01-24 18:31:57,411 -- [test_04system.py-->line:234] - INFO: 用例--获取系统配置-获取成功--执行通过
+2022-01-24 18:31:57,815 -- [test_04system.py-->line:265] - INFO: 用例--获取配置-获取成功--执行通过
+2022-01-24 18:31:58,211 -- [test_04system.py-->line:296] - INFO: 用例--获取首页功能模块-获取成功--执行通过
+2022-01-24 18:31:58,562 -- [test_05Interrogation.py-->line:39] - INFO: 用例--获取病症列表-获取成功--执行通过
+2022-01-24 18:31:58,901 -- [test_05Interrogation.py-->line:67] - INFO: 用例--搜索药品-获取成功--执行通过
+2022-01-24 18:31:59,315 -- [test_05Interrogation.py-->line:94] - INFO: 用例--获取医生列表-获取成功--执行通过
+2022-01-24 18:32:00,022 -- [test_06prescription.py-->line:45] - INFO: 用例--获取处方上传输入模板-查询成功--执行通过
+2022-01-24 18:32:00,454 -- [test_06prescription.py-->line:79] - INFO: 用例--获取配置-查询成功--执行通过
+2022-01-24 18:32:00,916 -- [test_06prescription.py-->line:113] - INFO: 用例--搜索药品-查询成功--执行通过
+2022-01-24 18:32:01,687 -- [test_06prescription.py-->line:147] - INFO: 用例--上传处方-查询成功--执行通过
+2022-01-24 18:32:02,044 -- [test_06prescription.py-->line:181] - INFO: 用例--线上处方列表-查询成功--执行通过
+2022-01-24 18:32:02,643 -- [test_06prescription.py-->line:215] - INFO: 用例--获取今日外方处方单列表-查询成功--执行通过
+2022-01-24 18:32:03,101 -- [test_06prescription.py-->line:250] - INFO: 用例--获取历史处方列表-查询成功--执行通过
+2022-01-24 18:32:03,511 -- [test_06prescription.py-->line:284] - INFO: 用例--获取门店子账号信息-查询成功--执行通过
+2022-01-24 18:32:03,973 -- [test_06prescription.py-->line:318] - INFO: 用例--获取门店子账号信息-查询成功--执行通过
+2022-01-24 18:32:04,334 -- [test_06prescription.py-->line:352] - INFO: 用例--申请调店-已经存在调店申请--执行通过
+2022-01-24 18:32:04,758 -- [test_06prescription.py-->line:386] - INFO: 用例--保存门店子账号签名图片-查询成功--执行通过
+2022-01-24 18:32:05,435 -- [test_06prescription.py-->line:431] - INFO: 用例--线上处方单调配、复合发药片-获取成功--执行通过
+2022-01-24 18:32:06,302 -- [test_06prescription.py-->line:476] - INFO: 用例--今日外方调配、复合发药片-获取成功--执行通过
+2022-01-24 18:32:06,798 -- [test_07remoteconsultation.py-->line:43] - INFO: 用例--会员查询-查询成功--执行通过
+2022-01-24 18:32:28,634 -- [test_07remoteconsultation.py-->line:82] - INFO: 用例--获取预约号-获取成功--执行通过
+2022-01-24 18:32:50,732 -- [test_07remoteconsultation.py-->line:135] - INFO: 用例--获取问诊输入模板-查询成功--执行通过
+2022-01-24 18:32:51,151 -- [test_07remoteconsultation.py-->line:162] - INFO: 用例--保存问诊输入模板数据-保存成功--执行通过
+2022-01-24 18:32:51,518 -- [test_07remoteconsultation.py-->line:190] - INFO: 用例--获取科室信息-查询成功--执行通过
+2022-01-24 18:33:14,146 -- [test_07remoteconsultation.py-->line:249] - INFO: 用例--获取医生列表-查询成功--执行通过
+2022-01-24 18:33:37,062 -- [test_07remoteconsultation.py-->line:325] - INFO: 用例--发送预约请求-查询成功--执行通过
+2022-01-24 18:33:37,243 -- [test_08shopweb.py-->line:38] - INFO: 用例--门店登录-登陆成功--执行通过
+2022-01-24 18:33:37,502 -- [test_08shopweb.py-->line:75] - INFO: 用例--获取处方单列表-获取成功--执行通过
+2022-01-24 18:33:37,770 -- [test_08shopweb.py-->line:104] - ERROR: 用例--查看视频记录-获取成功--执行未通过
+2022-01-24 18:33:37,770 -- [test_08shopweb.py-->line:105] - DEBUG: 预期结果：{'CODE': '0000'}
+2022-01-24 18:33:37,770 -- [test_08shopweb.py-->line:106] - DEBUG: 实际结果：{'CODE': '0001', 'MSG': '暂时没有视频，请稍后重试'}
+2022-01-24 18:33:37,771 -- [test_08shopweb.py-->line:107] - ERROR: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_08shopweb.py", line 101, in test_getChatVedio
+    self.assertEqual(expected["CODE"], res["CODE"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+2022-01-24 18:33:38,020 -- [test_08shopweb.py-->line:149] - INFO: 用例--获取处方数据-获取成功--执行通过
+2022-01-24 18:33:38,285 -- [test_08shopweb.py-->line:186] - INFO: 用例--获取处方数据-获取成功--执行通过
+2022-01-24 18:33:38,540 -- [test_08shopweb.py-->line:223] - INFO: 用例--获取待确认问诊列表-获取成功--执行通过
+2022-01-24 18:33:38,782 -- [test_08shopweb.py-->line:260] - INFO: 用例--提交处方-提交成功--执行通过
+2022-01-24 18:33:39,023 -- [test_08shopweb.py-->line:297] - INFO: 用例--外来问诊处方列表-获取成功--执行通过
+2022-01-24 18:33:39,262 -- [test_08shopweb.py-->line:326] - ERROR: 用例--获取处方详情-获取成功--执行未通过
+2022-01-24 18:33:39,263 -- [test_08shopweb.py-->line:327] - DEBUG: 预期结果：{'CODE': '0000'}
+2022-01-24 18:33:39,263 -- [test_08shopweb.py-->line:328] - DEBUG: 实际结果：{'CODE': '0001', 'MSG': '查询失败'}
+2022-01-24 18:33:39,263 -- [test_08shopweb.py-->line:329] - ERROR: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\Romens_apitest\testcases\test_08shopweb.py", line 323, in test_getOfflineOrderInfo
+    self.assertEqual(expected["CODE"], res["CODE"])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: '0000' != '0001'
+- 0000
+?    ^
++ 0001
+?    ^
+
+2022-01-24 18:34:09,902 -- [run_test.py-->line:34] - INFO: ---------------测试用例执行完毕,正在发送报告前往企业微信,请注意查收-----------------------
